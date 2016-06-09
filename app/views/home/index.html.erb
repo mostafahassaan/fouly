@@ -5,93 +5,34 @@
         <div class="container">
           <div class="navbar-header">
             <h1 class="navbar-brand">
-              <a data-type='rd-navbar-brand' href="./">Constr<span>ex</span>
-              </a>
-            </h1>
+          <a data-type='rd-navbar-brand'><span>El</span>Fouly</a>
+        </h1>
           </div>
 
           <ul class="navbar-nav sf-menu navbar-right" data-type="navbar">
-            <li class="active dropdown">
+
+            <li>
               <a>Home</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="index-6.html">Components</a>
-                </li>
-                <li>
-                  <a href="index-7.html">Footer light</a>
-                </li>
-                <li>
-                  <a href="index-8.html">Footer dark</a>
-                </li>
-                <li>
-                  <a href="index-9.html">Footer primary</a>
-                </li>
-                <li>
-                  <a href="index-14.html">Header light</a>
-                </li>
-                <li>
-                  <a href="index-10.html">Header transparent</a>
-                </li>
-                <li>
-                  <a href="index-11.html">Header background</a>
-                </li>
-                <li>
-                  <a href="index-12.html">Onepage template</a>
-                </li>
-                <li>
-                  <a href="index-13.html">Coming soon</a>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="index-1.html">About</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#">Aliuam congu
-                  </a>
-                </li>
-                <li>
-                  <a href="#">Ferentum nisl
-                  </a>
-                </li>
-                <li>
-                  <a href="#">Mauris accan
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">Aliuam congu</a>
-                    </li>
-                    <li>
-                      <a href="#">Ferentum nisl</a>
-                    </li>
-                    <li>
-                      <a href="#">Mauris accan
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">Nullavel diam</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">Nullavel diam</a>
-                </li>
-
-              </ul>
             </li>
             <li>
-              <a href="index-2.html">Services</a>
+              <a>Services</a>
             </li>
             <li>
-              <a href="index-3.html">Projects</a>
+              <%= link_to 'News', controller: 'articles' %>
             </li>
-
             <li>
-              <a href="index-4.html">Contacts</a>
+              <a>Refrences</a>
+            </li>
+            <li>
+              <a>Contact</a>
+            </li>
+            <li>
+              <a>عربي</a>
             </li>
           </ul>
         </div>
       </nav>
+
     </div>
 
     <section class="camera_container">
@@ -240,7 +181,7 @@
     <section class="well well3">
       <div class="container">
         <h3 class="text-center">
-          Our Services
+          Latest News
         </h3>
 
         <div class="row">
@@ -251,11 +192,11 @@
 
               <div class="caption">
                 <h6>
-                  Vestibulum iaculis lacinia est
+                  <%= @articles[2].title %>
                 </h6>
 
                 <p>
-                  Quisque porttitor sem libero auctor lorem fringilla sit amehasellus gravida nisi elitam egestda. Sedquis rra enim. Vivamus aliquet rutrum dui a varius. Mauris ornare tortor in eleifend blanditu
+                  <%= @articles[2].summary %>
                 </p>
                 <a href="#" class="btn-link">
                   <span class="fst" data-txt="Read More"></span>
@@ -270,11 +211,11 @@
 
               <div class="caption">
                 <h6>
-                  Proin dictum elementum velit
+                  <%= @articles[1].title %>
                 </h6>
 
                 <p>
-                  Vivamus aliquet rutrum dui a varius. Mauris ornare tortor in eleifend blanditullam ut ligula et neque. Nulla interdum dapibus erat nec element. Fusce aliquet tem por mi, vitae sollicitudin arcu convalli
+                  <%= @articles[1].summary %>
                 </p>
                 <a href="#" class="btn-link">
                   <span class="fst" data-txt="Read More"></span>
@@ -289,11 +230,11 @@
 
               <div class="caption">
                 <h6>
-                  Fusce euismod consequat ante
+                  <%= @articles[0].title %>
                 </h6>
 
                 <p>
-                  Sedquis viverra enim. Vivamus aliquet rutrum dui a varius. Mauris ornare tortor in eleifend blanditullam ut ligula et neque. Nulla interdum dapibusce aliquet tempor mi, vitae sollicitudin arcu con
+                  <%= @articles[0].summary %>
                 </p>
                 <a href="#" class="btn-link">
                   <span class="fst" data-txt="Read More"></span>
