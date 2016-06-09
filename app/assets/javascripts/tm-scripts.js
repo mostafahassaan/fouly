@@ -135,7 +135,7 @@
       var o = document.getElementById("google-map");
       if (o) {
           include('//maps.google.com/maps/api/js?sensor=false');
-          include('js/jquery.rd-google-map.js');
+          // include('js/jquery.rd-google-map.js');
 
           $(document).ready(function () {
               var o = $('#google-map');
@@ -273,9 +273,9 @@
 
       if (o.length > 0) {
           if (!(isIE() && (isIE() > 9))) {
-              include('js/jquery.mobile.customized.min.js');
+              // include('js/jquery.mobile.customized.min.js');
           }
-          include('js/camera.js');
+          // include('js/camera.js');
           $(document).ready(function () {
               o.camera({
                   autoAdvance: true,
@@ -304,7 +304,7 @@
   (function ($) {
       var o = $('.form-label');
       if (o.length) {
-          include('js/mailform-1/jquery.rd-input-label.js');
+          // include('js/mailform-1/jquery.rd-input-label.js');
 
           $(document).ready(function () {
               o.RDInputLabel();
@@ -344,8 +344,8 @@
   (function ($) {
       var o = $('.rd-mailform');
       if (o.length > 0) {
-          include('js/mailform-1/jquery.form.min.js');
-          include('js/mailform-1/jquery.rd-mailform.min.js');
+          // include('js/mailform-1/jquery.form.min.js');
+          // include('js/mailform-1/jquery.rd-mailform.min.js');
 
           $(document).ready(function () {
               var o = $('.rd-mailform');
@@ -397,8 +397,8 @@
   ;
   (function ($) {
       if($('.mailform-sub').hasClass('mailform-sub')) {
-          include('js/mailform/jquery.form.min.js');
-          include('js/mailform/jquery.rd-mailform.js');
+          // include('js/mailform/jquery.form.min.js');
+          // include('js/mailform/jquery.rd-mailform.js');
       }
   })(jQuery);
 

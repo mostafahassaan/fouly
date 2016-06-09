@@ -17,8 +17,8 @@
             mapClass: 'map_model',
             locationsClass: 'map_locations',
             marker: {
-                basic: 'images/gmap_marker.png',
-                active: 'images/gmap_marker_active.png'
+                basic: '/assets/gmap_marker.png',
+                active: '/assets/gmap_marker_active.png'
             },
             styles: []
         },

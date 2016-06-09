@@ -92,7 +92,7 @@
   z-index: 2;
 }
 .camera_loader {
-  background: #ffffff url(../images/camera-loader.gif) no-repeat center;
+  background: #ffffff url(/assets/camera-loader.gif) no-repeat center;
   border: 1px solid #ffffff;
   border-radius: 18px;
   height: 36px;
@@ -179,7 +179,7 @@
   height: 74px;
   text-align: center;
   cursor: pointer;
-  background: url("../images/dot1.jpg");
+  background: url("/assets/dot1.jpg");
   -moz-transition: 0.3s all ease;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
@@ -205,10 +205,10 @@
   zoom: 1;
 }
 .camera_pag_ul li:nth-child(2) {
-  background: url("../images/dot2.jpg");
+  background: url("/assets/dot2.jpg");
 }
 .camera_pag_ul li:nth-child(3) {
-  background: url("../images/dot3.jpg");
+  background: url("/assets/dot3.jpg");
 }
 .camera_pag_ul li.cameracurrent:before,
 .camera_pag_ul li:hover:before {
