@@ -192,7 +192,7 @@
 
               <div class="caption">
                 <h6>
-                  <%= @articles[2].title %>
+                  <%= link_to @articles[2].title, article_path(@articles[2]) %>
                 </h6>
 
                 <p>
@@ -211,7 +211,7 @@
 
               <div class="caption">
                 <h6>
-                  <%= @articles[1].title %>
+                  <%= link_to @articles[1].title, article_path(@articles[1]) %>
                 </h6>
 
                 <p>
@@ -230,7 +230,7 @@
 
               <div class="caption">
                 <h6>
-                  <%= @articles[0].title %>
+                  <%= link_to @articles[0].title, article_path(@articles[0]) %>
                 </h6>
 
                 <p>
@@ -342,30 +342,6 @@
               </p>
             </li>
           </ul>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="well well6 bg-primary">
-      <div class="container">
-        <div class="mailform-sub">
-
-          <p>
-            Subscribe to our Newsletter
-          </p>
-
-          <form class='mailform' method="post" action="bat/rd-mailform.php" data-type="contact">
-
-            <div class="form-group" data-add-placeholder>
-              <label for="mailform-input-email">Your email address</label>
-              <input id="mailform-input-email" type="text" name="email" data-constraints="@Email @NotEmpty"/>
-            </div>
-
-            <div class="form-group mfControls">
-              <button class="btn" type="submit">Subscribe</button>
-            </div>
-          </form>
 
         </div>
       </div>
