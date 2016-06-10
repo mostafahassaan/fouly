@@ -1955,7 +1955,7 @@ header {
   background: #ffffff;
 }
 header.head1 {
-  background: url("../images/slide1.jpg");
+  background: url("/assets/slide1.jpg");
   -webkit-background-size: cover;
   background-size: cover;
 }

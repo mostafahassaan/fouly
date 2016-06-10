@@ -12,7 +12,11 @@
 
   <body>
     <div class="page">
-      <%= yield %>
+      <%= render 'layouts/navbar' %>
+
+        <main>
+          <%= yield %>
+        </main>
     </div>
 
     <%= javascript_include_tag    'tm-scripts' %>

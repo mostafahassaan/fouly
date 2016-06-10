@@ -1,0 +1,37 @@
+<header  <%= current_page?(controller: 'home') ? '' : 'class=head1' %>>
+  <div id="stuck_container" class="stuck_container">
+    <nav class="navbar navbar-default navbar-static-top ">
+      <div class="container">
+        <div class="navbar-header">
+          <h1 class="navbar-brand">
+            <a data-type='rd-navbar-brand'>
+              <span>El</span>Fouly</a>
+          </h1>
+        </div>
+
+        <ul class="navbar-nav sf-menu navbar-right" data-type="navbar">
+
+          <li>
+            <%= link_to 'Home', controller: 'home' %>
+          </li>
+          <li>
+            <a>Services</a>
+          </li>
+          <li>
+            <%= link_to 'News', controller: 'articles' %>
+          </li>
+          <li>
+            <a>Refrences</a>
+          </li>
+          <li>
+            <a>Contact</a>
+          </li>
+          <li>
+            <a>عربي</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+</header>
