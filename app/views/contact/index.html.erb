@@ -1,0 +1,87 @@
+<section>
+  <div class="map">
+    <div id="google-map" class="map_model" data-zoom="11"></div>
+    <ul class="map_locations">
+      <li data-x="-73.9874068" data-y="40.643180" data-basic="images/gmap_marker.png" data-active="images/gmap_marker_active.png">
+        <p>
+          9870 St Vincent Place, Glasgow, DC 45 Fr 45.<br/>
+          <span>800 2345-6789</span>
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="well well7">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-xs-12">
+        <h3 class="text-center">
+          Address
+        </h3>
+        <address class="h6">
+          20 Adly Street, Cairo, Egypt.
+        </address>
+        <address class="addr1">
+
+          <dl>
+            <dt>Freephone:</dt>
+            <dd>
+              <a href='callto:#'>
+                +1 800 559 6580</a>
+            </dd>
+            <dt>Telephones:</dt>
+            <dd>
+              <a href='callto:#'>
+                +1 800 603 6035</a>
+            </dd>
+            <dt>FAX:</dt>
+            <dd>
+              <a href='callto:#'>
+                +1 800 889 9898</a>
+            </dd>
+          </dl>
+          <dl class="mail">
+            <dt>E-mail:</dt>
+            <dd>
+              <a href="mailto:#">mail@demolink.org</a>
+            </dd>
+          </dl>
+        </address>
+      </div>
+
+      <div class="col-md-8 col-xs-12">
+        <h3 class="text-center">
+          Contact Form
+        </h3>
+
+        <form class='mailform' method="post" action="bat/rd-mailform.php" data-type="contact">
+          <div class="form-group name" data-add-placeholder>
+            <label for="mailform-input-name">Your Name</label>
+            <input id="mailform-input-name" type="text" name="name" data-constraints="@LettersOnly @NotEmpty"/>
+          </div>
+
+          <div class="form-group" data-add-placeholder>
+            <label for="mailform-input-email">Your Email</label>
+            <input id="mailform-input-email" type="text" name="email" data-constraints="@Email @NotEmpty"/>
+          </div>
+
+          <div class="form-group" data-add-placeholder>
+            <label for="mailform-input-phone">Your Phone Number</label>
+            <input id="mailform-input-phone" type="text" name="phone" data-constraints="@Phone"/>
+          </div>
+
+          <div class="form-group textarea" data-add-placeholder>
+            <label for="mailform-input-textarea">Your Message</label>
+            <textarea id="mailform-input-textarea" name="message" data-constraints="@NotEmpty"></textarea>
+          </div>
+
+          <div class="form-group btn-wr">
+            <button class="btn btn-default" type="submit">Submit comment</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>s
