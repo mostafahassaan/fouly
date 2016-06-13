@@ -1,1 +1,29 @@
-<%= @service.title %>
+<section class="well well-14" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12  col-md-5  col-lg-4 text-left center991">
+        <img src="/assets/vertical2.jpg" alt="">
+      </div>
+      <div class="col-xs-12 col-sm-12  col-md-7  col-lg-8 text-left center991">
+        <h3 style="font-size:2em"><%= @service.title %> </h3>
+        <p class="offset-4"><%= @service.text %> </p>
+        <br>
+        <% @subservices.each do |s| %>
+          <div class="text-left left991 media">
+            <div class="media-left">
+              <i class="fa fa-check" style="font-size:4em;"></i>
+            </div>
+            <div class="media-body">
+              <h3 style="font-size:1.25em"><%= s.title %></h3>
+
+              <p><%= s.text %></p>
+            </div>
+          </div>
+          <br>
+        <% end %>
+
+      </div>
+    </div>
+
+  </div>
+</section>
