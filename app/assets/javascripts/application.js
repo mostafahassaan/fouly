@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require jquery-migrate-1.2.1.min
 //= require rd-smoothscroll.min
+//= require jquery.rd-navbar
 //= require device.min
 //= require bootstrap
 

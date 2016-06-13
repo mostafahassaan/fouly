@@ -208,7 +208,7 @@
   text-decoration: underline;
 }
 /*==================   RD Mobile Menu    =====================*/
-.rd-mobilepanel {
+/*.rd-mobilepanel {
   z-index: 9999998!important;
 }
 .rd-mobilemenu {
@@ -366,7 +366,7 @@
   .rd-mobilepanel {
     display: block;
   }
-}
+}*/
 /*==================  Panel Menu  ======================*/
 @media (max-width: 767px) {
   #panel {
