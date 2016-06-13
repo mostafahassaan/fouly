@@ -1,4 +1,4 @@
-<header  <%= current_page?(controller: 'home') ? '' : 'class=head1' %>>
+<header <%= current_page?(controller: 'home') ? '' : 'class=head1' %>>
   <div id="stuck_container" class="stuck_container">
     <nav class="navbar navbar-default navbar-static-top ">
       <div class="container">
@@ -14,8 +14,13 @@
           <li>
             <%= link_to 'Home', controller: 'home' %>
           </li>
-          <li>
-            <a>Services</a>
+          <li class="dropdown">
+            <%= link_to 'Services', controller: 'services' %>
+            <ul class="dropdown-menu">
+              <% @services.each do |s| %>
+                <li><%= link_to s.title, controller: 'services', action: 'show', id: s.id %></li>
+              <% end %>
+            </ul>
           </li>
           <li>
             <%= link_to 'News', controller: 'articles' %>
@@ -24,7 +29,7 @@
             <a>Refrences</a>
           </li>
           <li>
-              <%= link_to 'Contact', controller: 'contact' %>
+            <%= link_to 'Contact', controller: 'contact' %>
           </li>
           <li>
             <a>عربي</a>
