@@ -1,17 +1,33 @@
-<h1>Listing articles</h1>
+<section class="well well5" id="project">
+  <div class="container center767">
+    <h3 class="text-center">
+      News
+    </h3>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Summary</th>
-    <th>Text</th>
-  </tr>
+    <% @articles.each_slice(2).each do |group| %>
+    <div class="row">
+      <% group.each do |a| %>
+      <div class="col-sm-6 col-xs-12" style="padding:2em">
+        <img class="" src="/assets/page-1_img14.jpg" alt="">
 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.summary %></td>
-      <td><%= article.text %></td>
-    </tr>
-  <% end %>
-</table>
+        <div class="caption">
+          <h6 class="offset-3">
+            <a href="#">
+              <%= a.title %>
+            </a>
+          </h6>
+
+          <p class=""><%= a.summary %></p>
+          <a href="/articles/<%= a.id %>" class="btn-link">
+            <span class="fst" data-txt="Read More"></span>
+            <span class="snd" data-txt="Read More"></span>
+          </a>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+
+  <%= paginate @articles %>
+  </div>
+</section>
