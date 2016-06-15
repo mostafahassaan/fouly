@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160615161343) do
+ActiveRecord::Schema.define(version: 20160615185505) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -25,17 +25,15 @@ ActiveRecord::Schema.define(version: 20160615161343) do
     t.datetime "asset_updated_at"
   end
 
-  create_table "images", force: :cascade do |t|
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "services", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "asset_file_name"
+    t.string   "asset_content_type"
+    t.integer  "asset_file_size"
+    t.datetime "asset_updated_at"
   end
 
   create_table "subservices", force: :cascade do |t|
