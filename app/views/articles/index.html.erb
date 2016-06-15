@@ -8,7 +8,10 @@
     <div class="row">
       <% group.each do |a| %>
       <div class="col-sm-6 col-xs-12" style="padding:2em">
-        <img class="" src="/assets/page-1_img14.jpg" alt="">
+        <div class="flex-container-custom" style="height:260px; overflow: hidden;">
+          <img class="" src="<%= a.asset.url %>" alt="">
+        </div>
+
 
         <div class="caption">
           <h6 class="offset-3">
