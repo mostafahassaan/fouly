@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160615185505) do
+ActiveRecord::Schema.define(version: 20160617192511) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(version: 20160615185505) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "summary"
+    t.string   "asset_file_name"
+    t.string   "asset_content_type"
+    t.integer  "asset_file_size"
+    t.datetime "asset_updated_at"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.boolean  "bigProject"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "asset_file_name"
     t.string   "asset_content_type"
     t.integer  "asset_file_size"
@@ -35,6 +47,16 @@ ActiveRecord::Schema.define(version: 20160615185505) do
     t.integer  "asset_file_size"
     t.datetime "asset_updated_at"
   end
+
+  create_table "subprojects", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "subprojects", ["project_id"], name: "index_subprojects_on_project_id"
 
   create_table "subservices", force: :cascade do |t|
     t.string   "title"

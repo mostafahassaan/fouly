@@ -1,0 +1,43 @@
+<section class="well well5">
+  <div class="container center767">
+
+    <h4 class="text-center">
+      Our Largest Projects
+    </h4>
+
+    <% @bigProjects.each_slice(2).each do |group| %>
+    <div class="row">
+      <% group.each do |a| %>
+      <div class="col-sm-6 col-xs-12" style="padding:2em">
+        <div class="flex-container-custom" style="height:260px; overflow: hidden;">
+          <img class="" src="<%= a.asset.url %>" alt="">
+        </div>
+
+        <div class="caption">
+          <h6 class="offset-3">
+            <%= a.title %>
+          </h6>
+
+          <p class=""><%= a.text %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</section>
+
+<% @projects.each do |p| %>
+<section class="well well4 parallax text-center" data-url="images/parallax3-1.jpg" data-mobile="true" data-speed="0.6">
+  <div class="container">
+    <h2>
+      <%= p.title %>
+    </h2>
+
+    <p class="white ins1">
+      <%= p.text %>
+    </p>
+  </div>
+</section>
+
+<% end %>
