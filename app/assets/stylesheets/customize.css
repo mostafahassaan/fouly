@@ -1,6 +1,10 @@
 h1.navbar-brand {
   margin: 0 !important;
 }
+
+.bg-primary{
+  background: #28527B;
+}
 .flex-container-custom {
   height: 100%;
   padding: 0;

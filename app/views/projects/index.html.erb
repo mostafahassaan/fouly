@@ -28,16 +28,36 @@
 </section>
 
 <% @projects.each do |p| %>
-<section class="well well4 parallax text-center" data-url="images/parallax3-1.jpg" data-mobile="true" data-speed="0.6">
+<section class="well well7">
   <div class="container">
-    <h2>
+    <h3 class="text-center">
       <%= p.title %>
-    </h2>
+    </h3>
 
-    <p class="white ins1">
+    <p class="text-center">
       <%= p.text %>
     </p>
+    <div class="row">
+
+      <ul class="index-list index-list_mod col-4_mod">
+        <% p.subprojects.each do |s| %>
+        <li class="col-md-4 col-sm-6 col-xs-12">
+
+          <h6>
+            <a href="#">
+              <%= s.title %>
+            </a>
+          </h6>
+
+          <p>
+            <%= s.text %>
+          </p>
+        </li>
+
+        <% end %>
+      </ul>
+    </div>
+
   </div>
 </section>
-
 <% end %>
