@@ -1,15 +1,20 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'home/index'
-  get 'contact/index'
-  resources :articles
 
-  resources :services
-  resources :subservices
+  scope "/:locale" do
+    get 'home/index'
+    get 'contact/index'
+    resources :articles
 
-  resources :projects
-  resources :subprojects
-  # The priority is based upon order of creation: first created -> highest priority.
+    resources :services
+    resources :subservices
+
+    resources :projects
+    resources :subprojects
+
+  end
+
+    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

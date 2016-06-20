@@ -11,10 +11,10 @@
         <ul class="navbar-nav sf-menu navbar-right" data-type="navbar">
 
           <li>
-            <%= link_to 'Home', controller: 'home' %>
+            <%= link_to t :nav_home, controller: 'home' %>
           </li>
           <li class="dropdown">
-            <%= link_to 'Services', controller: 'services' %>
+            <%= link_to t :nav_services, controller: 'services' %>
             <ul class="dropdown-menu">
               <% @services.each do |s| %>
                 <li><%= link_to s.title, controller: 'services', action: 'show', id: s.id %></li>
@@ -22,16 +22,16 @@
             </ul>
           </li>
           <li>
-            <%= link_to 'News', controller: 'articles' %>
+            <%= link_to t :nav_news, controller: 'articles' %>
           </li>
           <li>
-            <a>Refrences</a>
+            <%= link_to t :nav_references, controller: 'projects' %>
           </li>
           <li>
-            <%= link_to 'Contact', controller: 'contact' %>
+            <%= link_to t :nav_contact, controller: 'contact' %>
           </li>
           <li>
-            <a>عربي</a>
+            <a><%= t :nav_language %></a>
           </li>
         </ul>
       </div>

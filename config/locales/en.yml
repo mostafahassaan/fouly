@@ -20,4 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  nav_contact: "Contact"
+  nav_references: "References"
+  nav_news: "News"
+  nav_services: "Services"
+  nav_home: "Home"
+  nav_language: "عربي"
