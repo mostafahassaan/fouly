@@ -1,6 +1,18 @@
 RailsAdmin.config do |config|
 
+  config.included_models = ['Article','Article::Translation']
 
+  config.model 'Article' do
+    configure :translations, :globalize_tabs
+  end
+
+  config.model 'Article::Translation' do
+    visible false
+    configure :locale, :hidden do
+      help ''
+    end
+    include_fields :locale, :title, :text, :summary
+  end
   ### Popular gems integration
 
   ## == Devise ==
