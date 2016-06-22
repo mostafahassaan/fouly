@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
     resources :projects
     resources :subprojects
+    get 'contact', to: 'contact#index'
 
   end
 

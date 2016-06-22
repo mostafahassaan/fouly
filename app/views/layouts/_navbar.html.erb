@@ -4,7 +4,9 @@
       <div class="container">
         <div class="navbar-header">
           <h1 class="navbar-brand">
-            <a data-type='rd-navbar-brand'>ElFouly<span> Co.</span></a>
+            <a data-type='rd-navbar-brand'>ElFouly<span>
+                Co.</span>
+            </a>
           </h1>
         </div>
 
@@ -14,10 +16,10 @@
             <%= link_to t :nav_home, controller: 'home' %>
           </li>
           <li class="dropdown">
-            <%= link_to t :nav_services, controller: 'services' %>
+            <a><%= t :nav_services %></a>
             <ul class="dropdown-menu">
               <% @services.each do |s| %>
-                <li><%= link_to s.title, controller: 'services', action: 'show', id: s.id %></li>
+              <li><%= link_to s.title, controller: 'services', action: 'show', id: s.id %></li>
               <% end %>
             </ul>
           </li>
@@ -25,13 +27,20 @@
             <%= link_to(t(:nav_news) , controller: 'articles')  %>
           </li>
           <li>
-            <%= link_to t :nav_references, controller: 'projects' %>
+            <%= link_to(t(:nav_references), controller: 'projects') %>
           </li>
           <li>
-            <%= link_to t :nav_contact, controller: 'contact' %>
+            <%= link_to(t(:nav_contact), controller: 'contact') %>
           </li>
           <li>
-            <a><%= t :nav_language %></a>
+
+            <% if I18n.locale == I18n.default_locale %>
+            <%= link_to "Arabic", :locale=>'ar'%>
+
+            <% else %>
+            <%= link_to "English", :locale=>'en'%>
+
+            <%end%>
           </li>
         </ul>
       </div>
