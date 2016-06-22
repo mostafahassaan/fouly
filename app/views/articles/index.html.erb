@@ -20,11 +20,11 @@
             </a>
           </h6>
 
+
           <p class=""><%= a.summary %></p>
-          <a href="/articles/<%= a.id %>" class="btn-link">
-            <span class="fst" data-txt="Read More"></span>
-            <span class="snd" data-txt="Read More"></span>
-          </a>
+          <br>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <%= link_to raw("<span>Read more</span>"), :controller => "articles", :action => "show", :id => a.id%>
         </div>
       </div>
       <% end %>

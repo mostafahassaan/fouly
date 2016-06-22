@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622135730) do
+ActiveRecord::Schema.define(version: 20160622151320) do
 
   create_table "article_translations", force: :cascade do |t|
     t.integer  "article_id", null: false
@@ -27,11 +27,8 @@ ActiveRecord::Schema.define(version: 20160622135730) do
   add_index "article_translations", ["locale"], name: "index_article_translations_on_locale"
 
   create_table "articles", force: :cascade do |t|
-    t.string   "title"
-    t.text     "text"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-    t.string   "summary"
     t.string   "asset_file_name"
     t.string   "asset_content_type"
     t.integer  "asset_file_size"
@@ -51,8 +48,6 @@ ActiveRecord::Schema.define(version: 20160622135730) do
   add_index "project_translations", ["project_id"], name: "index_project_translations_on_project_id"
 
   create_table "projects", force: :cascade do |t|
-    t.string   "title"
-    t.text     "text"
     t.boolean  "bigProject"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -73,9 +68,19 @@ ActiveRecord::Schema.define(version: 20160622135730) do
     t.datetime "asset_updated_at"
   end
 
-  create_table "subprojects", force: :cascade do |t|
+  create_table "subproject_translations", force: :cascade do |t|
+    t.integer  "subproject_id", null: false
+    t.string   "locale",        null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "title"
     t.text     "text"
+  end
+
+  add_index "subproject_translations", ["locale"], name: "index_subproject_translations_on_locale"
+  add_index "subproject_translations", ["subproject_id"], name: "index_subproject_translations_on_subproject_id"
+
+  create_table "subprojects", force: :cascade do |t|
     t.integer  "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
