@@ -20,7 +20,7 @@ gem 'jquery-rails'
 
 gem 'rails_admin'
 gem "paperclip"
-
+gem 'rtlit'
 gem 'globalize', '~> 5.0.0'
 gem 'rails_admin_globalize_field'
 
