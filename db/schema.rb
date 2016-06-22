@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160621123548) do
+ActiveRecord::Schema.define(version: 20160622135730) do
 
   create_table "article_translations", force: :cascade do |t|
     t.integer  "article_id", null: false
@@ -37,6 +37,18 @@ ActiveRecord::Schema.define(version: 20160621123548) do
     t.integer  "asset_file_size"
     t.datetime "asset_updated_at"
   end
+
+  create_table "project_translations", force: :cascade do |t|
+    t.integer  "project_id", null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "title"
+    t.text     "text"
+  end
+
+  add_index "project_translations", ["locale"], name: "index_project_translations_on_locale"
+  add_index "project_translations", ["project_id"], name: "index_project_translations_on_project_id"
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
