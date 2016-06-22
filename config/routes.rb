@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  scope "/:locale" do
-    get 'home/index'
-    get 'contact/index'
+  scope "(:locale)", :locale => /en|ar/ do
     resources :articles
 
     resources :services
@@ -19,7 +17,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
-
+  get '/:locale' => 'home#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

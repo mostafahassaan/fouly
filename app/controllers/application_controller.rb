@@ -9,15 +9,16 @@ class ApplicationController < ActionController::Base
   I18n.available_locales = [:en, :ar]
   I18n.default_locale = :en
 
-  # app/controllers/application_controller.rb
-  def default_url_options(options = {})
-    { locale: I18n.locale }.merge options
-  end
-
-
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
+    # =>if params[:locale] is nil then I18n.default_locale will be used
+    I18n.locale = params[:locale]
   end
+
+  def default_url_options(options={})
+    { :locale => I18n.locale }
+  end
+
+
 
   def find_services
     @services = Service.all
