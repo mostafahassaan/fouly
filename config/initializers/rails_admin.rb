@@ -62,7 +62,7 @@ RailsAdmin.config do |config|
     end
     include_fields :locale, :title, :text
   end
-  
+
   ### Translation end
   ### Popular gems integration
 
@@ -98,4 +98,13 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+
+  config.authenticate_with do
+    authenticate_or_request_with_http_basic('Site Message') do |username, password|
+      username == 'user' && password == 'password'
+    end
+  end
+
+
 end
