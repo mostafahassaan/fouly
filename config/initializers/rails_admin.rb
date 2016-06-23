@@ -1,7 +1,8 @@
 RailsAdmin.config do |config|
 
-  config.included_models = ['Article','Article::Translation', 'Project', 'Project::Translation', 'Subproject', 'Subproject::Translation']
+  config.included_models = ['Article','Article::Translation', 'Project', 'Project::Translation', 'Subproject', 'Subproject::Translation', 'Service', 'Service::Translation', 'Subservice', 'Subservice::Translation']
 
+  ### Translations start
   config.model 'Article' do
     configure :translations, :globalize_tabs
   end
@@ -38,6 +39,31 @@ RailsAdmin.config do |config|
     include_fields :locale, :title, :text
   end
 
+  config.model 'Service' do
+    configure :translations, :globalize_tabs
+  end
+
+  config.model 'Service::Translation' do
+    visible false
+    configure :locale, :hidden do
+      help ''
+    end
+    include_fields :locale, :title, :text
+  end
+
+  config.model 'Subservice' do
+    configure :translations, :globalize_tabs
+  end
+
+  config.model 'Subservice::Translation' do
+    visible false
+    configure :locale, :hidden do
+      help ''
+    end
+    include_fields :locale, :title, :text
+  end
+  
+  ### Translation end
   ### Popular gems integration
 
   ## == Devise ==

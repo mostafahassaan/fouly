@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622151320) do
+ActiveRecord::Schema.define(version: 20160623102658) do
 
   create_table "article_translations", force: :cascade do |t|
     t.integer  "article_id", null: false
@@ -57,9 +57,19 @@ ActiveRecord::Schema.define(version: 20160622151320) do
     t.datetime "asset_updated_at"
   end
 
-  create_table "services", force: :cascade do |t|
+  create_table "service_translations", force: :cascade do |t|
+    t.integer  "service_id", null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "title"
     t.text     "text"
+  end
+
+  add_index "service_translations", ["locale"], name: "index_service_translations_on_locale"
+  add_index "service_translations", ["service_id"], name: "index_service_translations_on_service_id"
+
+  create_table "services", force: :cascade do |t|
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "asset_file_name"
@@ -88,9 +98,19 @@ ActiveRecord::Schema.define(version: 20160622151320) do
 
   add_index "subprojects", ["project_id"], name: "index_subprojects_on_project_id"
 
-  create_table "subservices", force: :cascade do |t|
+  create_table "subservice_translations", force: :cascade do |t|
+    t.integer  "subservice_id", null: false
+    t.string   "locale",        null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "title"
     t.text     "text"
+  end
+
+  add_index "subservice_translations", ["locale"], name: "index_subservice_translations_on_locale"
+  add_index "subservice_translations", ["subservice_id"], name: "index_subservice_translations_on_subservice_id"
+
+  create_table "subservices", force: :cascade do |t|
     t.integer  "service_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
