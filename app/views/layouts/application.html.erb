@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fouly</title>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <% if I18n.locale == :en %>
+      <%= stylesheet_link_tag    'application', media: 'all' %>
+    <% end %>
+    <% if I18n.locale == :ar %>
+      <%= stylesheet_link_tag    'application-ar', media: 'all' %>
+    <% end %>
       <%= javascript_include_tag 'application'  %>
         <%= csrf_meta_tags %>
   </head>
 
   <body  data-no-turbolink>
-    <div class="page">
+    <div class="page" lang="ar" <% if I18n.locale == :ar %> style="direction: rtl"<% end %>>
       <%= render 'layouts/navbar' %>
 
         <main>
