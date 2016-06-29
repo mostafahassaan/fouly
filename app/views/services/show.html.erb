@@ -1,14 +1,14 @@
 <section class="well well-7">
   <div class="container">
     <div class="row-equal-height">
-      <div class="col-xs-12 col-sm-12  col-md-5  col-lg-4 text-left center991" style="background-image: url('<%= @service.asset.url %>'); background-position: center; min-height: 500px;">
+      <div class="col-xs-12 col-sm-12  col-md-5  col-lg-4 text-left center991 wow fadeInLeft" style="background-image: url('<%= @service.asset.url %>'); background-position: center; min-height: 500px;">
       </div>
       <div class="col-xs-12 col-sm-12  col-md-7  col-lg-8 text-left center991">
-        <h3 style="font-size:2em"><%= @service.title %> </h3>
-        <p class="offset-4"><%= @service.text %> </p>
+        <h3 style="font-size:2em" class="wow fadeInDown" ><%= @service.title %> </h3>
+        <p class="offset-4 wow fadeInDown" ><%= @service.text %> </p>
         <br>
         <% @subservices.each do |s| %>
-          <div class="text-left left991 media">
+          <div class="text-left left991 media wow fadeInDown" data-wow-delay="1s" >
             <div class="media-left">
               <i class="fa fa-check" style="font-size:4em;"></i>
             </div>

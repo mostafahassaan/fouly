@@ -6,7 +6,7 @@
     </h4>
 
     <% @bigProjects.each_slice(2).each do |group| %>
-    <div class="row">
+    <div class="row wow fadeInDown">
       <% group.each do |a| %>
       <div class="col-sm-6 col-xs-12" style="padding:2em">
         <div class="flex-container-custom" style="height:260px; overflow: hidden;">
@@ -41,7 +41,7 @@
 
       <ul class="index-list index-list_mod col-4_mod">
         <% p.subprojects.each do |s| %>
-        <li class="col-md-4 col-sm-6 col-xs-12">
+        <li class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight">
 
           <h6>
             <a href="#">
