@@ -8,7 +8,7 @@
         <hr>
 
         <div class="flex-container-custom" style="height:400px; overflow: hidden;">
-          <img src="<%= @article.asset.url %> " class="flex-item-custom" alt="">
+          <img src="<%= @article.asset.url(:large) %> " class="flex-item-custom" alt="">
         </div>
         <br>
         <h3 style="font-size:1em;"><%= @article.summary %></h3>

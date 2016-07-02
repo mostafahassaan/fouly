@@ -38,3 +38,7 @@ h1.navbar-brand {
     background-position: center;
     background-size: cover;
 }
+
+.paginate-center{
+  text-align:center;
+}

@@ -138,55 +138,30 @@
     </h3>
 
     <div class="row">
+      <% @articles.each do |a| %>
+        <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay=".7s">
+          <div class="thumbnail thumbnail4">
+            <img src="<%= a.asset.url(:small) %>" alt="">
 
-      <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay=".7s">
-        <div class="thumbnail thumbnail4">
-          <img src="/assets/page-1_img5.jpg" alt="">
+            <div class="caption">
+              <h6>
+                <%= link_to a.title, article_path(a) %>
+              </h6>
 
-          <div class="caption">
-            <h6>
-              <%= link_to @articles[2].title, article_path(@articles[2]) %>
-            </h6>
+              <p>
+                <%= a.summary %>
+              </p>
 
-            <p>
-              <%= @articles[2].summary %>
-            </p>
-
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay=".5s">
-        <div class="thumbnail thumbnail4">
-          <img src="/assets/page-1_img6.jpg" alt="">
+      <% end %>
+    </div>
 
-          <div class="caption">
-            <h6>
-              <%= link_to @articles[1].title, article_path(@articles[1]) %>
-            </h6>
 
-            <p>
-              <%= @articles[1].summary %>
-            </p>
 
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay=".3s">
-        <div class="thumbnail thumbnail4">
-          <img src="/assets/page-1_img7.jpg" alt="">
 
-          <div class="caption">
-            <h6>
-              <%= link_to @articles[0].title, article_path(@articles[0]) %>
-            </h6>
 
-            <p>
-              <%= @articles[0].summary %>
-            </p>
-
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>

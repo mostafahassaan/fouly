@@ -5,8 +5,8 @@ class Article < ActiveRecord::Base
 
   translates :title, :text, :summary
   accepts_nested_attributes_for :translations, allow_destroy: true
-  
-  has_attached_file :asset
+
+  has_attached_file :asset, styles: { small: "360x220#", medium: "530x310#", large: "1150x500#" }
   validates_attachment_content_type :asset, :content_type => /\Aimage\/.*\Z/
   # add a delete_<asset_name> method:
   attr_accessor :delete_asset

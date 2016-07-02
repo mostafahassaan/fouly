@@ -5,11 +5,11 @@
     </h3>
 
     <% @articles.each_slice(2).each do |group| %>
-    <div class="row wow fadeInDown">
+    <div class="row wow fadeIn">
       <% group.each do |a| %>
       <div class="col-sm-6 col-xs-12" style="padding:2em">
         <div class="flex-container-custom" style="height:260px; overflow: hidden;">
-          <img class="" src="<%= a.asset.url %>" alt="">
+          <img class="" src="<%= a.asset.url(:medium) %>" alt="">
         </div>
 
 
@@ -30,7 +30,9 @@
       <% end %>
     </div>
     <% end %>
+    <div class="paginate-center">
+      <%= paginate @articles %>
+    </div>
 
-  <%= paginate @articles %>
   </div>
 </section>
