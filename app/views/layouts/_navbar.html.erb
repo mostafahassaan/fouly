@@ -1,16 +1,17 @@
 <header class="<%= 'head1' if controller_name != 'home' %> ">
   <div id="stuck_container" class="stuck_container">
-    <nav class="navbar navbar-default navbar-static-top ">
+    <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
           <h1 class="navbar-brand">
-            <a data-type='rd-navbar-brand'>ElFouly<span>
-                Co.</span>
+            <a data-type='rd-navbar-brand'>
+            <%= t :nav_logo1 %> <span>
+                <%= t :nav_logo2 %> </span>
             </a>
           </h1>
         </div>
 
-        <ul class="navbar-nav sf-menu navbar-right" data-type="navbar">
+        <ul class="navbar-nav sf-menu navbar-right" data-type="navbar" id="navbar">
 
           <li>
             <%= link_to t :nav_home, controller: 'home' %>
