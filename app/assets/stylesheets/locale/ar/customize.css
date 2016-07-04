@@ -46,3 +46,15 @@ h1.navbar-brand {
 #navbar{
   font-size: 18px;
 }
+
+.rd-mobilepanel_title{
+  text-align: right;
+}
+.rd-mobilemenu .rd-mobilemenu_ul{
+  left:0;
+}
+
+.rd-mobilemenu.active .rd-mobilemenu_ul{
+  left:auto;
+  right:0!important;
+}

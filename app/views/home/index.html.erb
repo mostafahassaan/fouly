@@ -26,7 +26,7 @@
 <section class="well well1">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".9s">
+      <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".9s"  style="text-align: center;">
 
         <img src="/assets/page-1_img1.png" alt=""/>
         <h5 class="ins_r">
@@ -37,7 +37,7 @@
           Sed eleifend ornare metus, non rho ncus elit ultrices quis. Curabitur et met us ac sapien dictum
         </p>
       </div>
-      <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".7s">
+      <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".7s"  style="text-align: center;">
 
         <img src="/assets/page-1_img2.png" alt=""/>
         <h5 class="ins_r">
@@ -48,7 +48,7 @@
           Sed eleifend ornare metus, non rho ncus elit ultrices quis. Curabitur et met us ac sapien dictum
         </p>
       </div>
-      <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".5s">
+      <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".5s"  style="text-align: center;">
 
         <img src="/assets/page-1_img3.png" alt=""/>
         <h5 class="ins_r">
@@ -59,7 +59,7 @@
           Sed eleifend ornare metus, non rho ncus elit ultrices quis. Curabitur et met us ac sapien dictum
         </p>
       </div>
-      <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".3s">
+      <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".3s"  style="text-align: center;">
 
         <img src="/assets/page-1_img4.png" alt=""/>
         <h5 class="ins_r">
@@ -167,14 +167,17 @@
   </div>
 </section>
 
-<div class="map">
-  <div id="google-map" class="map_model"></div>
-  <ul class="map_locations">
-    <li data-x="-73.9874068" data-y="40.643180">
-      <p>
-        9870 St Vincent Place, Glasgow, DC 45 Fr 45.
-        <span>800 2345-6789</span>
-      </p>
-    </li>
-  </ul>
-</div>
+<section>
+  <div class="map">
+    <div id="google-map" class="map_model" data-zoom="16"></div>
+    <ul class="map_locations">
+
+      <li data-x="31.2434494" data-y="30.0510643" data-basic="/assets/gmap_marker.png" data-active="/assets/gmap_marker_active.png">
+        <p>
+          <%= t :address_text %> <br/>
+          <span><%= t :telephone_text %> </span>
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>

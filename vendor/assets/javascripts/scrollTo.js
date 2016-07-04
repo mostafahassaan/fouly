@@ -57,4 +57,3 @@ function onScroll(event) {
         }
     });
 }
-

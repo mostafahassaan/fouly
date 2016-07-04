@@ -1,11 +1,12 @@
 <section>
   <div class="map">
-    <div id="google-map" class="map_model" data-zoom="11"></div>
+    <div id="google-map" class="map_model" data-zoom="16"></div>
     <ul class="map_locations">
-      <li data-x="-73.9874068" data-y="40.643180" data-basic="images/gmap_marker.png" data-active="images/gmap_marker_active.png">
+
+      <li data-x="31.2434494" data-y="30.0510643" data-basic="/assets/gmap_marker.png" data-active="/assets/gmap_marker_active.png">
         <p>
-          9870 St Vincent Place, Glasgow, DC 45 Fr 45.<br/>
-          <span>800 2345-6789</span>
+          <%= t :address_text %> <br/>
+          <span><%= t :telephone_text %> </span>
         </p>
       </li>
     </ul>
@@ -17,44 +18,44 @@
     <div class="row">
       <div class="col-md-4 col-xs-12">
         <h3 class="text-center">
-          Address
+          <%= t :address %>
         </h3>
         <address class="h6">
-          20 Adly Street, Cairo, Egypt.
+          <%= t :address_text %>
         </address>
         <br>
         <address class="addr1">
 
           <dl>
-            <dt>Telephone:</dt>
+            <dt><%= t :telephone %></dt>
             <dd>
               <a href='callto:#'>
-                +202 3939 057</a>
+                <%= t :telephone_text %></a>
             </dd>
             <dt></dt>
             <dd>
               <a href='callto:#'>
-                +202 3926 505</a>
+                <%= t :telephone_text1 %></a>
             </dd>
             <dt>
               <dd></dd>
             </dt>
-            <dt>FAX:</dt>
+            <dt><%= t :fax %></dt>
             <dd>
               <a href='callto:#'>
-                +202 3926 505</a>
+                <%= t :fax_telex_text %></a>
             </dd>
             <dt>
               <dd></dd>
             </dt>
-            <dt>TELEX:</dt>
+            <dt><%= t :telex %></dt>
             <dd>
               <a href='callto:#'>
-                21791</a>
+                <%= t :fax_telex_text1 %></a>
             </dd>
           </dl>
           <dl class="mail">
-            <dt>E-mail:</dt>
+            <dt><%= t :email %></dt>
             <dd>
               <a href="mailto:#">info@elfoulycompany.com</a>
             </dd>
@@ -68,32 +69,32 @@
 
       <div class="col-md-8 col-xs-12 wow fadeInRight">
         <h3 class="text-center">
-          Contact Form
+          <%= t :nav_contact %>
         </h3>
 
         <form class='mailform' method="post" action="bat/rd-mailform.php" data-type="contact">
           <div class="form-group name" data-add-placeholder>
-            <label for="mailform-input-name">Your Name</label>
+            <label for="mailform-input-name"><%= t :your_name %></label>
             <input id="mailform-input-name" type="text" name="name" data-constraints="@LettersOnly @NotEmpty"/>
           </div>
 
           <div class="form-group" data-add-placeholder>
-            <label for="mailform-input-email">Your Email</label>
+            <label for="mailform-input-email"><%= t :your_email %></label>
             <input id="mailform-input-email" type="text" name="email" data-constraints="@Email @NotEmpty"/>
           </div>
 
           <div class="form-group" data-add-placeholder>
-            <label for="mailform-input-phone">Your Phone Number</label>
+            <label for="mailform-input-phone"><%= t :your_phone %></label>
             <input id="mailform-input-phone" type="text" name="phone" data-constraints="@Phone"/>
           </div>
 
           <div class="form-group textarea" data-add-placeholder>
-            <label for="mailform-input-textarea">Your Message</label>
+            <label for="mailform-input-textarea"><%= t :your_message %></label>
             <textarea id="mailform-input-textarea" name="message" data-constraints="@NotEmpty"></textarea>
           </div>
 
           <div class="form-group btn-wr">
-            <button class="btn btn-default" type="submit">Submit comment</button>
+            <button class="btn btn-default" type="submit"><%= t :submit_message %></button>
           </div>
         </form>
 

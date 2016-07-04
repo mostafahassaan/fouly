@@ -135,7 +135,7 @@
       var o = document.getElementById("google-map");
       if (o) {
           include('//maps.google.com/maps/api/js?sensor=false');
-          // include('js/jquery.rd-google-map.js');
+          include('/assets/jquery.rd-google-map.js');
 
           $(document).ready(function () {
               var o = $('#google-map');
@@ -145,7 +145,6 @@
                       "elementType": "all",
                       "stylers": [
                           {
-                              "hue": "#ffbb00"
                           }
                       ]
                   },
@@ -154,7 +153,6 @@
                           "elementType": "geometry.fill",
                           "stylers": [
                               {
-                                  "hue": "#ffbb00"
                               }
                           ]
                       },
@@ -163,7 +161,6 @@
                           "elementType": "labels.text.fill",
                           "stylers": [
                               {
-                                  "hue": "#ffbb00"
                               }
                           ]
                       }]});
