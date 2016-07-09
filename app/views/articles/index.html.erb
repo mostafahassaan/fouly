@@ -23,8 +23,13 @@
 
           <p class=""><%= a.summary %></p>
           <br>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <%= link_to raw("<span>Read more</span>"), :controller => "articles", :action => "show", :id => a.id%>
+            <% if I18n.locale == :ar %>
+              <%= link_to raw("<span> إقرأ المزيد</span>"), :controller => "articles", :action => "show", :id => a.id%>
+              <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+            <% else %>
+              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              <%= link_to raw("<span>Read more</span>"), :controller => "articles", :action => "show", :id => a.id%>
+            <% end %>
         </div>
       </div>
       <% end %>
