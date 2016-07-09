@@ -59,6 +59,14 @@ h1.navbar-brand {
   right:0!important;
 }
 
-h3{
-  font-size: 150% !important;
+.navbar-nav a {
+  font-size: x-large !important;
+}
+
+.navbar-nav {
+  padding-top: 17px !important;
+}
+
+.navbar-header{
+  padding-top: 23px !important;
 }

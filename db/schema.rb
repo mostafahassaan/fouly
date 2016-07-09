@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160623102658) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "article_translations", force: :cascade do |t|
     t.integer  "article_id", null: false
     t.string   "locale",     null: false
@@ -23,8 +26,8 @@ ActiveRecord::Schema.define(version: 20160623102658) do
     t.text     "summary"
   end
 
-  add_index "article_translations", ["article_id"], name: "index_article_translations_on_article_id"
-  add_index "article_translations", ["locale"], name: "index_article_translations_on_locale"
+  add_index "article_translations", ["article_id"], name: "index_article_translations_on_article_id", using: :btree
+  add_index "article_translations", ["locale"], name: "index_article_translations_on_locale", using: :btree
 
   create_table "articles", force: :cascade do |t|
     t.datetime "created_at",         null: false
@@ -44,8 +47,8 @@ ActiveRecord::Schema.define(version: 20160623102658) do
     t.text     "text"
   end
 
-  add_index "project_translations", ["locale"], name: "index_project_translations_on_locale"
-  add_index "project_translations", ["project_id"], name: "index_project_translations_on_project_id"
+  add_index "project_translations", ["locale"], name: "index_project_translations_on_locale", using: :btree
+  add_index "project_translations", ["project_id"], name: "index_project_translations_on_project_id", using: :btree
 
   create_table "projects", force: :cascade do |t|
     t.boolean  "bigProject"
@@ -66,8 +69,8 @@ ActiveRecord::Schema.define(version: 20160623102658) do
     t.text     "text"
   end
 
-  add_index "service_translations", ["locale"], name: "index_service_translations_on_locale"
-  add_index "service_translations", ["service_id"], name: "index_service_translations_on_service_id"
+  add_index "service_translations", ["locale"], name: "index_service_translations_on_locale", using: :btree
+  add_index "service_translations", ["service_id"], name: "index_service_translations_on_service_id", using: :btree
 
   create_table "services", force: :cascade do |t|
     t.datetime "created_at",         null: false
@@ -87,8 +90,8 @@ ActiveRecord::Schema.define(version: 20160623102658) do
     t.text     "text"
   end
 
-  add_index "subproject_translations", ["locale"], name: "index_subproject_translations_on_locale"
-  add_index "subproject_translations", ["subproject_id"], name: "index_subproject_translations_on_subproject_id"
+  add_index "subproject_translations", ["locale"], name: "index_subproject_translations_on_locale", using: :btree
+  add_index "subproject_translations", ["subproject_id"], name: "index_subproject_translations_on_subproject_id", using: :btree
 
   create_table "subprojects", force: :cascade do |t|
     t.integer  "project_id"
@@ -96,7 +99,7 @@ ActiveRecord::Schema.define(version: 20160623102658) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "subprojects", ["project_id"], name: "index_subprojects_on_project_id"
+  add_index "subprojects", ["project_id"], name: "index_subprojects_on_project_id", using: :btree
 
   create_table "subservice_translations", force: :cascade do |t|
     t.integer  "subservice_id", null: false
@@ -107,8 +110,8 @@ ActiveRecord::Schema.define(version: 20160623102658) do
     t.text     "text"
   end
 
-  add_index "subservice_translations", ["locale"], name: "index_subservice_translations_on_locale"
-  add_index "subservice_translations", ["subservice_id"], name: "index_subservice_translations_on_subservice_id"
+  add_index "subservice_translations", ["locale"], name: "index_subservice_translations_on_locale", using: :btree
+  add_index "subservice_translations", ["subservice_id"], name: "index_subservice_translations_on_subservice_id", using: :btree
 
   create_table "subservices", force: :cascade do |t|
     t.integer  "service_id"
@@ -116,6 +119,8 @@ ActiveRecord::Schema.define(version: 20160623102658) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "subservices", ["service_id"], name: "index_subservices_on_service_id"
+  add_index "subservices", ["service_id"], name: "index_subservices_on_service_id", using: :btree
 
+  add_foreign_key "subprojects", "projects"
+  add_foreign_key "subservices", "services"
 end
