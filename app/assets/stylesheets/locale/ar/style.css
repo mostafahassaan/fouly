@@ -36,8 +36,8 @@
   background: rgba(0, 0, 0, 0.9);
 }
 @media only screen and (max-width: 992px) {
-  .isStuck {
-    display: none !important;
+  .navbar-brand {
+    font-size: 18px;
   }
 }
 .isStuck .sf-menu ul {

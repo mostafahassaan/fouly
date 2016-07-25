@@ -1104,7 +1104,7 @@ th {
 }
 @media only screen and (max-width: 992px) {
   .isStuck {
-    display: none !important;
+    /*display: none !important;*/
   }
 }
 .isStuck .sf-menu ul {
@@ -6978,7 +6978,7 @@ a.badge:focus {
   line-height: 52px;
   font-weight: 500;
   color: #ffffff;
-  
+
   text-transform: uppercase;
 }
 .jumbotron .head span {

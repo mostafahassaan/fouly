@@ -1102,7 +1102,7 @@ th {
 }
 @media only screen and (max-width: 992px) {
   .isStuck {
-    display: none !important;
+    /*display: none !important;*/
   }
 }
 .isStuck .sf-menu ul {

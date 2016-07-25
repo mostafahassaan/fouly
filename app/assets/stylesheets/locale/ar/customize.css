@@ -43,10 +43,6 @@ h1.navbar-brand {
   text-align:center;
 }
 
-#navbar{
-  font-size: 18px;
-}
-
 .rd-mobilepanel_title{
   text-align: right;
 }
@@ -69,4 +65,8 @@ h1.navbar-brand {
 
 .navbar-header{
   padding-top: 23px !important;
+}
+
+#nav_language{
+  font-family: "Cairo", sans-serif;
 }
