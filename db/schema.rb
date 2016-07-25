@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160623102658) do
+ActiveRecord::Schema.define(version: 20160725142201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,23 @@ ActiveRecord::Schema.define(version: 20160623102658) do
     t.string   "asset_content_type"
     t.integer  "asset_file_size"
     t.datetime "asset_updated_at"
+  end
+
+  create_table "import_translations", force: :cascade do |t|
+    t.integer  "import_id",  null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "title"
+    t.text     "text"
+  end
+
+  add_index "import_translations", ["import_id"], name: "index_import_translations_on_import_id", using: :btree
+  add_index "import_translations", ["locale"], name: "index_import_translations_on_locale", using: :btree
+
+  create_table "imports", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "project_translations", force: :cascade do |t|
