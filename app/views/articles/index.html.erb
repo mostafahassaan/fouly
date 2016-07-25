@@ -1,6 +1,6 @@
 <section class="well well5" id="project">
   <div class="container center767">
-    <h3 class="text-center">
+    <h3 class="text-center arabic_lg">
       <%= t :nav_news %>
     </h3>
 
@@ -14,21 +14,24 @@
 
 
         <div class="caption">
-          <h6 class="offset-3">
+          <h6 class="offset-3 arabic_md">
             <a href="#">
               <%= a.title %>
             </a>
           </h6>
 
 
-          <p class=""><%= a.summary %></p>
+          <p class="arabic_sm"><%= a.summary %></p>
           <br>
             <% if I18n.locale == :ar %>
               <%= link_to raw("<span> إقرأ المزيد</span>"), :controller => "articles", :action => "show", :id => a.id%>
               <i class="fa fa-angle-double-left" aria-hidden="true"></i>
             <% else %>
-              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              <div class="arabic-xs">
               <%= link_to raw("<span>Read more</span>"), :controller => "articles", :action => "show", :id => a.id%>
+              </div>
             <% end %>
         </div>
       </div>

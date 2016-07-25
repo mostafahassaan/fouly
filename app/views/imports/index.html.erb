@@ -1,32 +1,41 @@
 <section class="well well7">
   <div class="container">
-    <h3 class="text-center">
+    <h3 class="text-center arabic_lg">
       <%= t :imports %>
     </h3>
 
-    <p class="text-center">
+    <p class="text-center arabic_md">
       <%= t :imports_text %>
     </p>
+
+
+    <% @imports.each_slice(2).each do |group| %>
     <div class="row">
 
-      <ul class="index-list index-list_mod">
-        <% @imports.each do |s| %>
-          <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top:30px; margin-bottom:30px;">
-
-            <h6>
+      <ul class="list">
+        <% group.each do |s| %>
+        <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-left left991 media" style="margin-top:30px; margin-bottom:30px;">
+          <div class="media-left">
+              <i class="fa fa-check" style="font-size:2em;"></i>
+          </div>
+          <div class="media-body">
+            <h6 class="arabic_md">
               <a href="#">
                 <%= s.title %>
               </a>
             </h6>
 
-            <p>
+            <p class="arabic_sm">
               <%= s.text %>
             </p>
-          </li>
+          </div>
+
+        </li>
 
         <% end %>
       </ul>
     </div>
+    <% end %>
 
   </div>
 </section>

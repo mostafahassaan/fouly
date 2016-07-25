@@ -67,6 +67,32 @@ h1.navbar-brand {
   padding-top: 23px !important;
 }
 
+.arabic_xl{
+  font-size: 45px !important;
+}
+
+.arabic_lg{
+  font-size: 38px !important;
+}
+.arabic_md{
+  font-size: 27px !important;
+}
+
+.arabic_sm{
+  font-size: 23px !important;
+}
+
+.arabic_xs{
+  font-size: 20px !important;
+}
+
+.mail{
+  font-family: "Cairo", sans-serif;
+  font-size: 17px !important;
+}
+
+
+
 #nav_language{
   font-family: "Cairo", sans-serif;
 }
