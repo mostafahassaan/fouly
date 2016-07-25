@@ -2,7 +2,7 @@
   <div class="container">
 
     <h4 class="text-center">
-      Our Largest Projects
+      <%= t :largest_projects %>
     </h4>
     <% @bigProjects.each_slice(2).each do |group| %>
     <div class="row wow fadeInDown">
@@ -42,9 +42,9 @@
     </p>
     <div class="row">
 
-      <ul class="index-list index-list_mod col-4_mod">
+      <ul class="index-list index-list_mod">
         <% p.subprojects.each do |s| %>
-        <li class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight">
+        <li class="col-md-4 col-sm-6 col-xs-12" style="margin-top:30px; margin-bottom:30px;">
 
           <h6>
             <a href="#">

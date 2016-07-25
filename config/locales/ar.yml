@@ -27,3 +27,6 @@ ar:
   your_message: "رسالتك"
   submit_message: "أرسل"
   read_more: "إقرأ المزيد"
+  imports: "استيراد"
+  imports_text: "كلام كل "
+  largest_projects: "أهم اعمالنا"
