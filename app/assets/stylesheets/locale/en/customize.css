@@ -42,3 +42,7 @@ h1.navbar-brand {
 .paginate-center{
   text-align:center;
 }
+
+.dropdown-menu {
+  padding-right: 0 !important;
+}

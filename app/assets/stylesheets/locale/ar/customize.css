@@ -21,6 +21,18 @@ h1.navbar-brand {
   padding: 5px;
   line-height: 20px;
   text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-item-custom {
+  padding: 5px;
+  line-height: 20px;
+  text-align: center;
 }
 .row-equal-height {
   display: -webkit-box;
@@ -91,7 +103,9 @@ h1.navbar-brand {
   font-size: 17px !important;
 }
 
-
+.dropdown-menu {
+  padding-left: 0 !important;
+}
 
 #nav_language{
   font-family: "Cairo", sans-serif;

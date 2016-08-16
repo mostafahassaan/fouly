@@ -1,7 +1,7 @@
 <section class="well well5">
   <div class="container">
 
-    <h4 class="text-center">
+    <h3 class="text-center arabic_lg">
       <%= t :largest_projects %>
     </h4>
     <% @bigProjects.each_slice(2).each do |group| %>
@@ -13,11 +13,10 @@
         </div>
 
         <div class="caption">
-          <h6 class="offset-3">
+          <h6 class="offset-3 arabic_md">
             <%= a.title %>
           </h6>
-
-          <p class=""><%= a.text %></p>
+          <p class="arabic_sm"><%= a.text %></p>
         </div>
       </div>
       <% end %>
@@ -33,11 +32,11 @@
 <% @projects.each do |p| %>
 <section class="well well7">
   <div class="container">
-    <h3 class="text-center">
+    <h4 class="text-center arabic_lg">
       <%= p.title %>
-    </h3>
+    </h4>
 
-    <p class="text-center">
+    <p class="text-center arabic_md">
       <%= p.text %>
     </p>
     <div class="row">
@@ -48,11 +47,13 @@
 
           <h6>
             <a href="#">
-              <%= s.title %>
+              <p class="arabic_md">
+                <%= s.title %>
+              </p>
             </a>
           </h6>
 
-          <p>
+          <p class="arabic_sm">
             <%= s.text %>
           </p>
         </li>
