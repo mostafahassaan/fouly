@@ -18,6 +18,5 @@
 //= require jquery.rd-navbar
 //= require device.min
 //= require bootstrap
-
 //= require jquery.fancybox
 //= require_tree ../../../vendor/assets/javascripts

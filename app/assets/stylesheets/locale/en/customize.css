@@ -46,3 +46,12 @@ h1.navbar-brand {
 .dropdown-menu {
   padding-right: 0 !important;
 }
+
+
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 20% !important;
+}
