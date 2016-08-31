@@ -1,6 +1,6 @@
 RailsAdmin.config do |config|
 
-  config.included_models = ['Article','Article::Translation', 'Project', 'Project::Translation', 'Subproject', 'Subproject::Translation', 'Service', 'Service::Translation', 'Subservice', 'Subservice::Translation', 'Import', 'Import::Translation']
+  config.included_models = ['Article','Article::Translation', 'Project', 'Project::Translation', 'Subproject', 'Subproject::Translation', 'Service', 'Service::Translation', 'Subservice', 'Subservice::Translation', 'Import', 'Import::Translation', 'Point', 'Point::Translation']
 
   ### Translations start
   config.model 'Article' do
@@ -73,6 +73,18 @@ RailsAdmin.config do |config|
       help ''
     end
     include_fields :locale, :title, :text
+  end
+
+  config.model 'Point' do
+    configure :translations, :globalize_tabs
+  end
+
+  config.model 'Point::Translation' do
+    visible false
+    configure :locale, :hidden do
+      help ''
+    end
+    include_fields :locale, :text
   end
 
   ### Translation end

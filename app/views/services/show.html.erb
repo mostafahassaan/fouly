@@ -1,33 +1,35 @@
 <section class="well well-7">
   <div class="container">
-    <h3 class="text-center">
-      <%= @service.title%>
-    </h3>
+    <div class="row">
+      <h3 class="text-center">
+        <%= @service.title%>
+      </h3>
+      <br>
+      <p class="text-center">
+        <%= @service.text %>
+      </p>
+    </div>
 
-    <p class="text-center">
-      <%= @service.text %>
-    </p>
-  </div>
-</section>
-
-<section class="well well-7">
-  <div class="container">
-    <h3 class="text-center">
-      Services List
-    </h3>
-
-    <div class="row col-3_mod">
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <ul class="marked-list wow fadeInRight" data-wow-delay=".3s">
-          <li><a href="#">Sed libero purus vulputate</a></li>
-          <li><a href="#">Lorem ipsum dolor sed leoraesent</a></li>
-          <li><a href="#">Pestibulum molestieenean nonu</a></li>
-          <li><a href="#">Hendreritivamus eget nibh vel metus</a></li>
-          <li><a href="#">Etiam cursus leo psum</a></li>
-          <li><a href="#">Nulla facilisii primis neclaoreet</a></li>
-          <li><a href="#">Aenean nec eros luctus</a></li>
-        </ul>
+    <div class="row">
+      <h3 class="text-center">
+        Services List
+      </h3>
+      <br>
+      <ul class="list-inline">
+          <% @service.points.each do |s| %>
+          <li class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="media">
+              <div class="media-left">
+                <i class="fa fa-check-circle-o" style="padding-bottom: 20px;"></i>
+              </div>
+              <div class="media-body">
+                <p><%= s.text %></p>
+              </div>
+            </div>
+          <% end %>
+      </ul>
       </div>
+
     </div>
   </div>
 </section>

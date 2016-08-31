@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160725142201) do
+ActiveRecord::Schema.define(version: 20160828162308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,25 @@ ActiveRecord::Schema.define(version: 20160725142201) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "point_translations", force: :cascade do |t|
+    t.integer  "point_id",   null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "text"
+  end
+
+  add_index "point_translations", ["locale"], name: "index_point_translations_on_locale", using: :btree
+  add_index "point_translations", ["point_id"], name: "index_point_translations_on_point_id", using: :btree
+
+  create_table "points", force: :cascade do |t|
+    t.integer  "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "points", ["service_id"], name: "index_points_on_service_id", using: :btree
 
   create_table "project_translations", force: :cascade do |t|
     t.integer  "project_id", null: false
@@ -138,6 +157,7 @@ ActiveRecord::Schema.define(version: 20160725142201) do
 
   add_index "subservices", ["service_id"], name: "index_subservices_on_service_id", using: :btree
 
+  add_foreign_key "points", "services"
   add_foreign_key "subprojects", "projects"
   add_foreign_key "subservices", "services"
 end
