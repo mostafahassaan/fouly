@@ -110,3 +110,9 @@ h1.navbar-brand {
 #nav_language{
   font-family: "Cairo", sans-serif;
 }
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}

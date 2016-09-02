@@ -1,6 +1,6 @@
 RailsAdmin.config do |config|
 
-  config.included_models = ['Article','Article::Translation', 'Project', 'Project::Translation', 'Subproject', 'Subproject::Translation', 'Service', 'Service::Translation', 'Subservice', 'Subservice::Translation', 'Import', 'Import::Translation', 'Point', 'Point::Translation']
+  config.included_models = ['Article','Article::Translation', 'Project', 'Project::Translation', 'Subproject', 'Subproject::Translation', 'Service', 'Service::Translation', 'Subservice', 'Subservice::Translation', 'Import', 'Import::Translation', 'Point', 'Point::Translation', 'Image']
 
   ### Translations start
   config.model 'Article' do

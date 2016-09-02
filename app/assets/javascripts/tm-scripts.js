@@ -16,6 +16,8 @@
   // include('js/jquery.easing.1.3.js');
 
 
+
+
   /* Stick up menus
    ========================================================*/
   ;
@@ -181,14 +183,15 @@
                   margin: 30,
                   smartSpeed: 450,
                   //loop: true,
-                  dots: true,
+                  dots: false,
                   dotsEach: 1,
-                  nav: false,
+                  nav: true,
                   navClass: ['owl-prev fa fa-angle-left', 'owl-next fa fa-angle-right'],
                   responsive: {
                       0: { items: 1 },
-                      768: { items: 1},
-                      980: { items: 1}
+                      1120: { items: 4 },
+                      768: { items: 3},
+                      500: { items: 2}
                   }
               });
           });
@@ -196,7 +199,7 @@
   })(jQuery);
 
 
-  /* WOW
+  /* WOWjQuery
    ========================================================*/
   ;
   (function ($) {
@@ -465,11 +468,8 @@
   /* FancyBox
   ========================================================*/
   ;(function ($) {
-      var o = $('.thumb');
+      var o = $('a.fancybox');
       if (o.length > 0) {
-          include('js/jquery.fancybox.js');
-          include('js/jquery.fancybox-media.js');
-          include('js/jquery.fancybox-buttons.js');
           $(document).ready(function () {
               o.fancybox();
           });

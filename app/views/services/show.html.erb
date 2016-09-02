@@ -34,20 +34,26 @@
   </div>
 </section>
 
-
-<section>
-    <div id="owl-demo" class="owl-carousel owl-theme">
-
-      <div class="item">
-        <img src="<%= @service.asset.url(:large) %>">
-      </div>
-
+<section class="parallax text-center" data-url="/assets/parallax1.jpg" data-mobile="true" data-speed="0.6">
+    <div class="container">
+      <h2 class="fw-l arabic_xl" style="padding-top: 1em">
+        Gallery
+      </h2>
+    </div>
+    <div id="owl-demo" style="max-width: 80%">
+        <% @images.each do |s| %>
+          <div class="item" style="padding-top: 2em; padding-bottom: 2em">
+            <a class="fancybox" href="<%= s.asset.url(:large) %>">
+	             <img src="<%= s.asset.url(:square) %>" alt=""/>
+            </a>
+          </div>
+        <% end %>
     </div>
 </section>
 
 
 
-    <div class="row-equal-height">
+    <!-- <div class="row-equal-height">
       <div class="col-xs-12 col-sm-12  col-md-5  col-lg-4 text-left center991 wow fadeInLeft1" style="background-image: url('<%= @service.asset.url(:large) %>'); background-position: center; min-height: 500px;">
       </div>
       <div class="col-xs-12 col-sm-12  col-md-7  col-lg-8 text-left center991">
@@ -69,4 +75,4 @@
         <% end %>
 
       </div>
-    </div>
+    </div> -->

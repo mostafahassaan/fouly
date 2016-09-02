@@ -3,6 +3,7 @@ class Service < ActiveRecord::Base
   validates :text, presence: true
   has_many :subservices
   has_many :points
+  has_many :images
 
   translates :title, :text
   accepts_nested_attributes_for :translations, allow_destroy: true

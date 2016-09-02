@@ -23,7 +23,7 @@ gem "paperclip"
 gem 'rtlit'
 gem 'globalize', '~> 5.0.0'
 gem 'rails_admin_globalize_field'
-
+gem 'fancybox-rails'
 gem 'owlcarousel-rails'
 gem "wysiwyg-rails"
 

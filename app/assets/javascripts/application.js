@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require fancybox
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery-migrate-1.2.1.min
@@ -18,6 +19,5 @@
 //= require jquery.rd-navbar
 //= require device.min
 //= require bootstrap
-//= require jquery.fancybox
 //= require owl.carousel
 //= require_tree ../../../vendor/assets/javascripts

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160828162308) do
+ActiveRecord::Schema.define(version: 20160902131336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,18 @@ ActiveRecord::Schema.define(version: 20160828162308) do
     t.integer  "asset_file_size"
     t.datetime "asset_updated_at"
   end
+
+  create_table "images", force: :cascade do |t|
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "asset_file_name"
+    t.string   "asset_content_type"
+    t.integer  "asset_file_size"
+    t.datetime "asset_updated_at"
+    t.integer  "service_id"
+  end
+
+  add_index "images", ["service_id"], name: "index_images_on_service_id", using: :btree
 
   create_table "import_translations", force: :cascade do |t|
     t.integer  "import_id",  null: false
@@ -157,6 +169,7 @@ ActiveRecord::Schema.define(version: 20160828162308) do
 
   add_index "subservices", ["service_id"], name: "index_subservices_on_service_id", using: :btree
 
+  add_foreign_key "images", "services"
   add_foreign_key "points", "services"
   add_foreign_key "subprojects", "projects"
   add_foreign_key "subservices", "services"
