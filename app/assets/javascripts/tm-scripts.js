@@ -173,17 +173,17 @@
   /* Owl Carousel
   ========================================================*/
   ;(function ($) {
-      var o = $('.owl-carousel');
+      var o = $('#owl-demo');
       if (o.length > 0) {
-          include('js/owl.carousel.min.js');
+          // include('js/owl.carousel.min.js');
           $(document).ready(function () {
               o.owlCarousel({
                   margin: 30,
                   smartSpeed: 450,
-                  loop: true,
-                  dots: false,
+                  //loop: true,
+                  dots: true,
                   dotsEach: 1,
-                  nav: true,
+                  nav: false,
                   navClass: ['owl-prev fa fa-angle-left', 'owl-next fa fa-angle-right'],
                   responsive: {
                       0: { items: 1 },

@@ -19,4 +19,5 @@
 //= require device.min
 //= require bootstrap
 //= require jquery.fancybox
+//= require owl.carousel
 //= require_tree ../../../vendor/assets/javascripts

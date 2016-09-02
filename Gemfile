@@ -24,6 +24,7 @@ gem 'rtlit'
 gem 'globalize', '~> 5.0.0'
 gem 'rails_admin_globalize_field'
 
+gem 'owlcarousel-rails'
 gem "wysiwyg-rails"
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
