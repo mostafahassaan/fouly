@@ -63,3 +63,39 @@ h1.navbar-brand {
     text-align:center;
     margin: 0 auto;
 }
+
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.page-header {
+  color: #000000;
+  font-size: 3em;
+}
+
+.page-title {
+  color: #000000;
+  font-size: 2.5em;
+}
+
+.gallery-title {
+  font-size: 3em !important;
+}

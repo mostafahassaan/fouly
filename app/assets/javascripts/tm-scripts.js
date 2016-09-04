@@ -185,7 +185,7 @@
                   //loop: true,
                   dots: false,
                   dotsEach: 1,
-                  nav: true,
+                  nav: false,
                   navClass: ['owl-prev fa fa-angle-left', 'owl-next fa fa-angle-right'],
                   responsive: {
                       0: { items: 1 },

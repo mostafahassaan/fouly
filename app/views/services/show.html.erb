@@ -1,9 +1,9 @@
 <section class="well well-7">
   <div class="container">
     <div class="row">
-      <h3 class="text-center">
+      <h2 class="text-center page-header">
         <%= @service.title%>
-      </h3>
+      </h2>
       <br>
       <p class="text-center">
         <%= @service.text %>
@@ -11,68 +11,72 @@
     </div>
 
     <div class="row">
-      <h3 class="text-center">
+      <h2 class="text-center page-title">
         Services List
-      </h3>
-      <br>
-      <ul class="list-inline">
-          <% @service.points.each do |s| %>
-          <li class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            <div class="media">
-              <div class="media-left">
-                <i class="fa fa-check-circle-o" style="padding-bottom: 20px;"></i>
-              </div>
-              <div class="media-body">
-                <p><%= s.text %></p>
-              </div>
-            </div>
-          <% end %>
-      </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="parallax text-center" data-url="/assets/parallax1.jpg" data-mobile="true" data-speed="0.6">
-    <div class="container">
-      <h2 class="fw-l arabic_xl" style="padding-top: 1em">
-        Gallery
       </h2>
-    </div>
-    <div id="owl-demo" style="max-width: 80%">
-        <% @images.each do |s| %>
-          <div class="item" style="padding-top: 2em; padding-bottom: 2em">
-            <a class="fancybox" href="<%= s.asset.url(:large) %>">
-	             <img src="<%= s.asset.url(:square) %>" alt=""/>
-            </a>
-          </div>
-        <% end %>
-    </div>
-</section>
-
-
-
-    <!-- <div class="row-equal-height">
-      <div class="col-xs-12 col-sm-12  col-md-5  col-lg-4 text-left center991 wow fadeInLeft1" style="background-image: url('<%= @service.asset.url(:large) %>'); background-position: center; min-height: 500px;">
-      </div>
-      <div class="col-xs-12 col-sm-12  col-md-7  col-lg-8 text-left center991">
-        <h3 style="font-size:2em" class="wow fadeInDown" ><%= @service.title %> </h3>
-        <p class="offset-4 wow fadeInDown" ><%= @service.text %> </p>
-        <br>
-        <% @subservices.each do |s| %>
-          <div class="text-left left991 media wow fadeInDown" data-wow-delay="1s" >
+      <br>
+      <div class="row is-flex">
+        <% @service.points.each do |s| %>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="media">
             <div class="media-left">
-              <i class="fa fa-check" style="font-size:4em;"></i>
+              <i class="fa fa-check-circle-o" style="padding-bottom: 20px;"></i>
             </div>
             <div class="media-body">
-              <h3 style="font-size:1.25em"><%= s.title %></h3>
-
               <p><%= s.text %></p>
             </div>
           </div>
-          <br>
+        </div>
         <% end %>
+      </ul>
+    </div>
 
+  </div>
+</div>
+</section>
+
+<section class="well well4 well4-mod parallax text-center" data-url="/assets/parallax1.jpg" data-mobile="true"data-speed="0.6">
+  <div class="container">
+    <h2 class="fw-l arabic_xl gallery-title">
+      Gallery
+    </h2>
+  </div>
+  <div id="owl-demo" style="max-width: 80%">
+    <% @images.each do |s| %>
+    <div class="item" >
+      <a class="fancybox" href="<%= s.asset.url(:large) %>">
+        <img src="<%= s.asset.url(:square) %>" alt=""/>
+      </a>
+    </div>
+    <% end %>
+  </div>
+</section>
+
+<section class="well well3 well3-mod" id="services">
+  <div class="container">
+    <h2 class="text-center page-title">
+      Related Services
+    </h2>
+
+    <div class="row is-flex">
+
+      <% @service.subservices.each do |s| %>
+      <div class="col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 5em;" data-wow-delay=".7s">
+        <div class="thumbnail thumbnail4">
+          <img src="<%= s.images.first.asset.url(:small) %>" alt="">
+
+          <div class="caption">
+            <h6>
+              <%= s.title %>
+            </h6>
+
+            <p><%= s.text %> </p>
+          </div>
+        </div>
       </div>
-    </div> -->
+      <% end %>
+    </div>
+
+
+  </div>
+</section>
