@@ -91,7 +91,7 @@ h1.navbar-brand {
 }
 
 .arabic_sm{
-  font-size: 23px !important;
+  font-size: 25px !important;
 }
 
 .arabic_xs{
@@ -115,4 +115,18 @@ h1.navbar-brand {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.page-header {
+  color: #000000;
+  font-size: 3em;
+}
+
+.page-title {
+  color: #000000;
+  font-size: 2.5em;
+}
+
+.gallery-title {
+  font-size: 3em !important;
 }

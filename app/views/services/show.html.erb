@@ -2,22 +2,22 @@
   <div class="container">
     <div class="row">
       <h2 class="text-center page-header">
-        <%= @service.title%>
+        <%= @service.title %>
       </h2>
       <br>
-      <p class="text-center">
+      <p class="text-center arabic_sm">
         <%= @service.text %>
       </p>
     </div>
 
     <div class="row">
       <h2 class="text-center page-title">
-        Services List
+        <%= t :details %>
       </h2>
       <br>
       <div class="row is-flex">
         <% @service.points.each do |s| %>
-        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 arabic_sm">
           <div class="media">
             <div class="media-left">
               <i class="fa fa-check-circle-o" style="padding-bottom: 20px;"></i>
@@ -35,13 +35,13 @@
 </div>
 </section>
 
-<section class="well well4 well4-mod parallax text-center" data-url="/assets/parallax1.jpg" data-mobile="true"data-speed="0.6">
+<section class="well parallax text-center" data-url="/assets/parallax1.jpg" data-mobile="true"data-speed="0.6">
   <div class="container">
     <h2 class="fw-l arabic_xl gallery-title">
-      Gallery
+        <%= t :gallery %>
     </h2>
   </div>
-  <div id="owl-demo" style="max-width: 80%">
+  <div id="owl-demo" style="max-width: 80%; direction: ltr;">
     <% @images.each do |s| %>
     <div class="item" >
       <a class="fancybox" href="<%= s.asset.url(:large) %>">
@@ -55,7 +55,7 @@
 <section class="well well3 well3-mod" id="services">
   <div class="container">
     <h2 class="text-center page-title">
-      Related Services
+      <%= t :related_services %>
     </h2>
 
     <div class="row is-flex">
@@ -66,11 +66,11 @@
           <img src="<%= s.images.first.asset.url(:small) %>" alt="">
 
           <div class="caption">
-            <h6>
+            <h6 class="arabic_md">
               <%= s.title %>
             </h6>
 
-            <p><%= s.text %> </p>
+            <p class="arabic_sm"><%= s.text %> </p>
           </div>
         </div>
       </div>
