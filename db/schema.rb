@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160904123338) do
+ActiveRecord::Schema.define(version: 20160906125921) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,11 +82,13 @@ ActiveRecord::Schema.define(version: 20160904123338) do
 
   create_table "points", force: :cascade do |t|
     t.integer  "service_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "subservice_id"
   end
 
   add_index "points", ["service_id"], name: "index_points_on_service_id", using: :btree
+  add_index "points", ["subservice_id"], name: "index_points_on_subservice_id", using: :btree
 
   create_table "project_translations", force: :cascade do |t|
     t.integer  "project_id", null: false
@@ -174,6 +176,7 @@ ActiveRecord::Schema.define(version: 20160904123338) do
   add_foreign_key "images", "services"
   add_foreign_key "images", "subservices"
   add_foreign_key "points", "services"
+  add_foreign_key "points", "subservices"
   add_foreign_key "subprojects", "projects"
   add_foreign_key "subservices", "services"
 end

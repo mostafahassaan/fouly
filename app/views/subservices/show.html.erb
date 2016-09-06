@@ -1,0 +1,57 @@
+<section class="well well-7">
+  <div class="container">
+    <div class="row">
+      <h2 class="text-center page-header-custom">
+        <%= @subservice.title %>
+      </h2>
+      <br>
+      <p class="text-center arabic_sm">
+        <%= @subservice.text %>
+      </p>
+    </div>
+
+    <div class="row">
+      <h2 class="text-center page-title">
+        <%= t :details %>
+      </h2>
+      <br>
+      <div class="row is-flex">
+        <% @subservice.points.each do |s| %>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 arabic_sm">
+          <div class="media">
+            <div class="media-left">
+              <i class="fa fa-check-circle-o" style="padding-bottom: 20px;"></i>
+            </div>
+            <div class="media-body">
+              <p><%= s.text %></p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section class="well parallax text-center" data-url="/assets/parallax1.jpg" data-mobile="true"data-speed="0.6">
+  <div class="container">
+    <h2 class="fw-l arabic_xl gallery-title">
+        <%= t :gallery %>
+    </h2>
+  </div>
+  <div id="owl-demo" style="max-width: 80%; direction: ltr;">
+    <% @images.each do |s| %>
+    <div class="item" >
+      <a class="fancybox" href="<%= s.asset.url(:large) %>">
+        <img style="border-radius:4px;"src="<%= s.asset.url(:square) %>" alt=""/>
+      </a>
+    </div>
+    <% end %>
+  </div>
+</section>
+
+<section class="well">
+
+</section>

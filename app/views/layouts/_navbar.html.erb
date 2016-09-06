@@ -25,7 +25,7 @@
                   <%= link_to s.title, controller: 'services', action: 'show', id: s.id %>
                   <ul class="dropdown-menu">
                     <% s.subservices.each do |ss| %>
-                      <li><%= link_to ss.title, controller: 'services', action: 'show', id: s.id %></li>
+                      <li><%= link_to ss.title, controller: 'subservices', action: 'show', id: ss.id %></li>
                     <% end %>
                   </ul>
                 </li>

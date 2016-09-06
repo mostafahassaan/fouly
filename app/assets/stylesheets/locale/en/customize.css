@@ -86,7 +86,7 @@ h1.navbar-brand {
     flex-direction: column;
 }
 
-.page-header {
+.page-header-custom {
   color: #000000;
   font-size: 3em;
 }

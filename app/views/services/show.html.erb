@@ -1,7 +1,7 @@
 <section class="well well-7">
   <div class="container">
     <div class="row">
-      <h2 class="text-center page-header">
+      <h2 class="text-center page-header-custom">
         <%= @service.title %>
       </h2>
       <br>
@@ -20,7 +20,7 @@
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 arabic_sm">
           <div class="media">
             <div class="media-left">
-              <i class="fa fa-check-circle-o" style="padding-bottom: 20px;"></i>
+              <i style="color: #28527b;" class="fa fa-check-circle-o" style="padding-bottom: 20px;"></i>
             </div>
             <div class="media-body">
               <p><%= s.text %></p>
@@ -35,7 +35,7 @@
 </div>
 </section>
 
-<section class="well parallax text-center" data-url="/assets/parallax1.jpg" data-mobile="true"data-speed="0.6">
+<section class="well parallax text-center" data-url="/assets/parallax1.jpg" data-speed="0.6">
   <div class="container">
     <h2 class="fw-l arabic_xl gallery-title">
         <%= t :gallery %>
@@ -45,7 +45,7 @@
     <% @images.each do |s| %>
     <div class="item" >
       <a class="fancybox" href="<%= s.asset.url(:large) %>">
-        <img src="<%= s.asset.url(:square) %>" alt=""/>
+        <img style="border-radius:4px;"src="<%= s.asset.url(:square) %>" alt=""/>
       </a>
     </div>
     <% end %>
@@ -63,14 +63,17 @@
       <% @service.subservices.each do |s| %>
       <div class="col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 5em;" data-wow-delay=".7s">
         <div class="thumbnail thumbnail4">
-          <img src="<%= s.images.first.asset.url(:small) %>" alt="">
+          <%= link_to  controller: 'subservices', action: 'show', id: s.id do %>
+            <img src="<%= s.images.first.asset.url(:small) %>" alt="">
+          <% end %>
+
 
           <div class="caption">
             <h6 class="arabic_md">
-              <%= s.title %>
+              <%= link_to s.title, controller: 'subservices', action: 'show', id: s.id %>
             </h6>
 
-            <p class="arabic_sm"><%= s.text %> </p>
+            <p class="arabic_sm"><%= link_to s.text, controller: 'subservices', action: 'show', id: s.id %> </p>
           </div>
         </div>
       </div>
