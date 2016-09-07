@@ -125,12 +125,8 @@ ActiveRecord::Schema.define(version: 20160906125921) do
   add_index "service_translations", ["service_id"], name: "index_service_translations_on_service_id", using: :btree
 
   create_table "services", force: :cascade do |t|
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "asset_file_name"
-    t.string   "asset_content_type"
-    t.integer  "asset_file_size"
-    t.datetime "asset_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "subproject_translations", force: :cascade do |t|

@@ -1,4 +1,4 @@
-<section class="well well-7">
+<section class="well well7">
   <div class="container">
     <div class="row">
       <h2 class="text-center page-header-custom">
@@ -9,7 +9,13 @@
         <%= @service.text %>
       </p>
     </div>
+  </div>
+</section>
 
+<hr style="max-width:70%;">
+
+<section class="well well7">
+  <div class="container">
     <div class="row">
       <h2 class="text-center page-title">
         <%= t :details %>
@@ -35,10 +41,10 @@
 </div>
 </section>
 
-<section class="well parallax text-center" data-url="/assets/parallax1.jpg" data-speed="0.6">
+<section class="well well7 parallax text-center" data-url="/assets/parallax1.jpg" data-speed="0.6">
   <div class="container">
     <h2 class="fw-l arabic_xl gallery-title">
-        <%= t :gallery %>
+      <%= t :gallery %>
     </h2>
   </div>
   <div id="owl-demo" style="max-width: 80%; direction: ltr;">
@@ -64,7 +70,7 @@
       <div class="col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 5em;" data-wow-delay=".7s">
         <div class="thumbnail thumbnail4">
           <%= link_to  controller: 'subservices', action: 'show', id: s.id do %>
-            <img src="<%= s.images.first.asset.url(:small) %>" alt="">
+          <img src="<%= s.images.first.asset.url(:small) %>" alt="">
           <% end %>
 
 
