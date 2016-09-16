@@ -5,6 +5,7 @@ h1.navbar-brand {
 .bg-primary{
   background: #28527B;
 }
+
 .flex-container-custom {
   height: 100%;
   padding: 0;
@@ -98,4 +99,63 @@ h1.navbar-brand {
 
 .gallery-title {
   font-size: 3em !important;
+}
+
+.active_filter {
+    text-decoration: none;
+    background-color: #e8e8e8;
+    color: #499C4D !important;
+}
+
+#filter {
+  background: #499C4D;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+#filter li {
+  margin-top: -8px;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 35px;
+  color: #ffffff;
+  letter-spacing: -0.6px;
+}
+
+#filter  a {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+/*#filter li + li {
+  position: relative;
+}
+#filter li + li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.5);
+}*/
+
+#filter > li > a:hover,
+#filter > li > a:focus {
+  text-decoration: none;
+  background-color: #e8e8e8;
+}
+
+#filter > li.disabled > a {
+  color: #9d9394;
+}
+#filter > li.disabled > a:hover,
+.nav > li.disabled > a:focus {
+  color: #9d9394;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: not-allowed;
 }

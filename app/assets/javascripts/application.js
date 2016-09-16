@@ -20,4 +20,5 @@
 //= require device.min
 //= require bootstrap
 //= require owl.carousel
+//= require projects.coffee
 //= require_tree ../../../vendor/assets/javascripts

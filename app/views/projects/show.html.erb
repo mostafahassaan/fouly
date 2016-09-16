@@ -5,20 +5,31 @@
     </h2>
 
     <ul class="nav nav-justified" id="filter">
-      <li class="nav-item active_filter">
+      <li class="nav-item">
         <%= link_to "Largest Projects", controller: 'projects', action: 'index'%>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="all_projects">
         <%= link_to "All Projects", controller: 'projects', action: 'show', id: 0 %>
       </li>
       <% @projects.each do |project| %>
-      <li class="nav-item">
+      <li class="nav-item" id="<%=project.id.to_s %>">
         <%= link_to project.title, controller: 'projects', action: 'show', id: project.id %>
       </li>
       <% end %>
     </ul>
   </div>
 </section>
+
+<script>
+  var filter = window.location.href.slice(-1);
+  var element;
+  if (filter == "0"){
+    element = document.getElementById("all_projects");
+  }else{
+    element = document.getElementById(filter);
+  }
+  element.classList.add("active_filter");
+</script>
 
 <section class="well well5">
   <div class="container">
