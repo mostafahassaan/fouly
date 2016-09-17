@@ -1,15 +1,15 @@
 <section class="well well17">
   <div class="container">
     <h2 class="text-center page-header-custom" style="padding-bottom: 1.5em;">
-      References
+      <%= t :references %>
     </h2>
 
     <ul class="nav nav-justified" id="filter">
       <li class="nav-item">
-        <%= link_to "Largest Projects", controller: 'projects', action: 'index'%>
+        <%= link_to t :largest_projects, controller: 'projects', action: 'index'%>
       </li>
       <li class="nav-item" id="all_projects">
-        <%= link_to "All Projects", controller: 'projects', action: 'show', id: 0 %>
+        <%= link_to t :all_projects, controller: 'projects', action: 'show', id: 0 %>
       </li>
       <% @projects.each do |project| %>
       <li class="nav-item" id="<%=project.id.to_s %>">
@@ -31,7 +31,7 @@
   element.classList.add("active_filter");
 </script>
 
-<section class="well well5">
+<section class="well">
   <div class="container">
 
     <h3 class="text-center arabic_lg">
