@@ -26,19 +26,21 @@
     <h3 class="text-center arabic_lg">
 
     </h4>
+    <% c = 0 %>
     <% @subprojects.each_slice(2).each do |group| %>
     <div class="row">
       <% group.each do |a| %>
       <div class="col-sm-6 col-xs-12" style="padding:2em">
         <div class="flex-container-custom" style="height:260px; overflow: hidden;">
-
+          <img src="<%= @images[c].asset.url(:medium) %>" alt=""/>
         </div>
 
         <div class="caption">
           <h6 class="offset-3 arabic_md">
             <%= a.title %>
           </h6>
-          <p class="arabic_sm"><%= a.text %></p>
+          <p class="arabic_sm"><%= a.text  %></p>
+           <% c += 1 %>
         </div>
       </div>
       <% end %>
