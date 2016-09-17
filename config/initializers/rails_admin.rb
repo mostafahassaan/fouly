@@ -12,11 +12,15 @@ RailsAdmin.config do |config|
     configure :locale, :hidden do
       help ''
     end
+
     include_fields :locale, :title, :text, :summary
   end
 
   config.model 'Project' do
     configure :translations, :globalize_tabs
+    configure :bigProject do
+      hide
+    end
   end
 
   config.model 'Project::Translation' do
@@ -75,7 +79,28 @@ RailsAdmin.config do |config|
     include_fields :locale, :title, :text
   end
 
+  config.model 'Image' do
+    configure :service_id do
+      hide
+    end
+    configure :subservice_id do
+      hide
+    end
+    configure :subproject_id do
+      hide
+    end
+  end
+
   config.model 'Point' do
+
+
+    configure :service_id do
+      hide
+    end
+    configure :subservice_id do
+      hide
+    end
+
     configure :translations, :globalize_tabs
   end
 
