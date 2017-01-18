@@ -30,6 +30,9 @@
   }
   element.classList.add("active_filter");
 </script>
+<% @projects.each do |p| %>
+  <img src="<%= p.asset.url(:medium) %>" alt=""/>
+<% end %>
 
 <section class="well">
   <div class="container">
