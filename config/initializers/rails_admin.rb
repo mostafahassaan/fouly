@@ -32,7 +32,11 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Subproject' do
+    visible false
     configure :translations, :globalize_tabs
+    configure :project_id do
+        hide
+    end
   end
 
   config.model 'Subproject::Translation' do
@@ -40,6 +44,7 @@ RailsAdmin.config do |config|
     configure :locale, :hidden do
       help ''
     end
+    
     include_fields :locale, :title, :text
   end
 
@@ -154,6 +159,8 @@ RailsAdmin.config do |config|
       username == 'user' && password == 'password'
     end
   end
+
+  
 
 
 end

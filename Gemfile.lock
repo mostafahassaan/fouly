@@ -104,7 +104,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
-    pg (0.18.4)
+    pg (0.19.0)
     pkg-config (1.1.7)
     rack (1.6.4)
     rack-pjax (0.8.0)
@@ -229,4 +229,4 @@ DEPENDENCIES
   wysiwyg-rails
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
