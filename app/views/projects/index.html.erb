@@ -4,16 +4,17 @@
       <%= t :references %>
     </h2>
 
-    <ul class="nav nav-justified" id="filter">
-      <li class="nav-item active_filter">
-        <%= link_to t :largest_projects, controller: 'projects', action: 'index'%>
-      </li>
-      <li class="nav-item">
-        <%= link_to t :all_projects, controller: 'projects', action: 'show', id: 0 %>
+    <ul class="nav nav-justified tablish" id="filter">
+      <li class=" active_filter">
+        <%= link_to controller: 'projects', action: 'index' do%>
+        <span class="center-block"><%= t :largest_projects%></span>
+        <% end %> 
       </li>
       <% @projects.each do |project| %>
-      <li class="nav-item">
-        <%= link_to project.title, controller: 'projects', action: 'show', id: project.id %>
+      <li >
+        <%= link_to controller: 'projects', action: 'show', id: project.id  do%>
+        <span class="center-block"><%=project.title%></span>
+        <% end %>
       </li>
       <% end %>
     </ul>
@@ -32,7 +33,7 @@
       <% group.each do |a| %>
       <div class="col-sm-6 col-xs-12" style="padding:2em">
         <div class="flex-container-custom" style="height:260px; overflow: hidden;">
-          <img src="<%= @images[c].asset.url(:medium) %>" alt=""/>
+          <img src="<%= a.asset.url(:medium) %>" alt=""/>
         </div>
 
         <div class="caption">

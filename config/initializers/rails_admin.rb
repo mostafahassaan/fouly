@@ -32,7 +32,6 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Subproject' do
-    visible false
     configure :translations, :globalize_tabs
     configure :project_id do
         hide
@@ -91,9 +90,7 @@ RailsAdmin.config do |config|
     configure :subservice_id do
       hide
     end
-    configure :subproject_id do
-      hide
-    end
+    
   end
 
   config.model 'Point' do

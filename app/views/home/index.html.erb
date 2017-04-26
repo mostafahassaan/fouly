@@ -61,7 +61,7 @@
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".3s"  style="text-align: center;">
 
-        <img src="/assets/page-1_img4.png" alt=""/>
+        <img src="/assetadmins/page-1_img4.png" alt=""/>
         <h5 class="ins_r">
           New Technologies
         </h5>
@@ -80,92 +80,85 @@
       <%= t :our_history %>
     </h2>
     <p class="white ins1 offs1">
-      Sed eleifend ornare metus, non rhoncus elit ultrices quis. Curabitur et metus acsapien dict um tempus. Nam blandit sed ligula faucibus elementum. Sed sed consequat nisi. Etiam mauris massa, sodales lobortis tortor id, dictum sollicitudin feli
+      <%= t :our_history_text %>
     </p>
   </div>
 </section>
 <section class="ang_block bg-primary text-center wow fadeIn" data-wow-duration="1.5s">
-  <div class="container">
+  <div class="container" id="home_numbers">
     <div class="row">
+
       <div class="col-md-3 col-sm-3 col-xs-6">
-
         <em>
-          453
+          10
         </em>
-
         <p>
-          clients
+          <%= t :engineers %>
         </p>
       </div>
+      
       <div class="col-md-3 col-sm-3 col-xs-6">
-
         <em>
-          765
+          90
         </em>
-
         <p>
-          recent projects
+          <%= t :technicians %>
         </p>
       </div>
+
       <div class="col-md-3 col-sm-3 col-xs-6">
-
         <em>
-          27
+          5
         </em>
-
         <p>
-          awards
+          <%= t :foremen %>
         </p>
       </div>
+      
       <div class="col-md-3 col-sm-3 col-xs-6">
-
         <em>
-          1220
+          15
         </em>
-
         <p>
-          members
+          <%= t :admin_financing %>
         </p>
       </div>
+
     </div>
   </div>
 </section>
 
-<section class="well well3">
-  <div class="container">
-    <h3 class="text-center arabic_lg">
-      <%= t :latest_news %>
-    </h3>
+<% if @object.present? then %>
+  <section class="well well3">
+    <div class="container">
+      <h3 class="text-center arabic_lg">
+        <%= t :latest_news %>
+      </h3>
 
-    <div class="row">
-      <% @articles.each do |a| %>
-        <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay=".7s">
-          <div class="thumbnail thumbnail4">
-            <img src="<%= a.asset.url(:small) %>" alt="">
+      <div class="row">
+        <% @articles.each do |a| %>
+          <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay=".7s">
+            <div class="thumbnail thumbnail4">
+              <img src="<%= a.asset.url(:small) %>" alt="">
 
-            <div class="caption">
-              <h6>
-                <%= link_to a.title, article_path(a) %>
-              </h6>
+              <div class="caption">
+                <h6>
+                  <%= link_to a.title, article_path(a) %>
+                </h6>
 
-              <p>
-                <%= a.summary %>
-              </p>
+                <p>
+                  <%= a.summary %>
+                </p>
 
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
+      </div>
     </div>
-
-
-
-
-
-
-    </div>
-  </div>
-</section>
+  </section>
+<% end %>
 
 <section>
   <div class="map">

@@ -1,5 +1,5 @@
 class Point < ActiveRecord::Base
-
+  belongs_to :subservice
   translates :text
   accepts_nested_attributes_for :translations, allow_destroy: true
 
