@@ -105,9 +105,10 @@
                     }
                 );
 
-
                 if (options.locations[i].content) {
-                    google.maps.event.addListener(markers[i], 'click', function () {
+
+
+                    google.maps.event.addListener(markers[i], 'mouseover', function () {
                         for (var j in markers) {
                             markers[j].setIcon(options.locations[j].basic);
                         }

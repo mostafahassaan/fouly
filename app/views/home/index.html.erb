@@ -1,12 +1,21 @@
 <section class="camera_container">
   <div class="jumbotron text-center">
     <div class="container">
-      <p class="head" >
+      <% if I18n.locale == I18n.default_locale %>
+        <p class="head">
+          <%= t :jumbo1 %>
+          <span>
+            <%= t :jumbo2 %>
+          </span>
+        </p>
+      <% else %>
+      <p class="head" style="font-size:77px">
         <%= t :jumbo1 %>
-        <span>
+        <span style="font-size:60px">
           <%= t :jumbo2 %>
         </span>
       </p>
+      <%end%>
     </div>
   </div>
   <div id="camera" class="camera_wrap">
@@ -27,47 +36,46 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".9s"  style="text-align: center;">
-
         <img src="/assets/page-1_img1.png" alt=""/>
-        <h5 class="ins_r">
-          Project Management
+        <h5 class="text-center" >
+          <%= t :project_managment %>
         </h5>
 
-        <p class="txt-light">
-          Sed eleifend ornare metus, non rho ncus elit ultrices quis. Curabitur et met us ac sapien dictum
+        <p class="txt-light text-center">
+          <%= t :project_managment_text %>
         </p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".7s"  style="text-align: center;">
 
-        <img src="/assets/page-1_img2.png" alt=""/>
-        <h5 class="ins_r">
-          Building Innovation
+        <img src="/assets/page-1_img4.png" alt=""/>
+        <h5 class="text-center">
+          <%= t :inovations %>
         </h5>
 
-        <p class="txt-light">
-          Sed eleifend ornare metus, non rho ncus elit ultrices quis. Curabitur et met us ac sapien dictum
+        <p class="txt-light text-center">
+          <%= t :inovations_text %>
         </p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".5s"  style="text-align: center;">
 
-        <img src="/assets/page-1_img3.png" alt=""/>
-        <h5 class="ins_r">
-          Inspection & Testing
+        <img src="/assets/impexp.png" alt=""/>
+        <h5 class="text-center">
+          <%= t :imp_exp %>
         </h5>
 
-        <p class="txt-light">
-          Sed eleifend ornare metus, non rho ncus elit ultrices quis. Curabitur et met us ac sapien dictum
+        <p class="txt-light text-center">
+          <%= t :imp_exp_text %>
         </p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".3s"  style="text-align: center;">
 
-        <img src="/assetadmins/page-1_img4.png" alt=""/>
-        <h5 class="ins_r">
-          New Technologies
+        <img src="/assets/page-1_img2.png" alt=""/>
+        <h5 class="text-center">
+          <%= t :inspection %>
         </h5>
 
-        <p class="txt-light">
-          Sed eleifend ornare metus, non rho ncus elit ultrices quis. Curabitur et met us ac sapien dictum
+        <p class="txt-light text-center">
+          <%= t :inspection_text %>
         </p>
       </div>
     </div>
@@ -84,6 +92,7 @@
     </p>
   </div>
 </section>
+
 <section class="ang_block bg-primary text-center wow fadeIn" data-wow-duration="1.5s">
   <div class="container" id="home_numbers">
     <div class="row">
@@ -96,7 +105,7 @@
           <%= t :engineers %>
         </p>
       </div>
-      
+
       <div class="col-md-3 col-sm-3 col-xs-6">
         <em>
           90
@@ -114,7 +123,7 @@
           <%= t :foremen %>
         </p>
       </div>
-      
+
       <div class="col-md-3 col-sm-3 col-xs-6">
         <em>
           15
@@ -128,7 +137,6 @@
   </div>
 </section>
 
-<% if @object.present? then %>
   <section class="well well3">
     <div class="container">
       <h3 class="text-center arabic_lg">
@@ -137,16 +145,16 @@
 
       <div class="row">
         <% @articles.each do |a| %>
-          <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay=".7s">
+          <div class="col-md-4 col-sm-6 col-xs-12" >
             <div class="thumbnail thumbnail4">
               <img src="<%= a.asset.url(:small) %>" alt="">
 
               <div class="caption">
-                <h6>
+                <h6 class="arabic_md">
                   <%= link_to a.title, article_path(a) %>
                 </h6>
 
-                <p>
+                <p class="arabic_xs">
                   <%= a.summary %>
                 </p>
 
@@ -158,9 +166,7 @@
       </div>
     </div>
   </section>
-<% end %>
 
-<section>
   <div class="map">
     <div id="google-map" class="map_model" data-zoom="16"></div>
     <ul class="map_locations">
@@ -173,4 +179,3 @@
       </li>
     </ul>
   </div>
-</section>

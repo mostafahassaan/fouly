@@ -281,13 +281,13 @@
                   autoAdvance: true,
                   height: '42.23170731707317%',
                   minHeight: '350px',
-                  pagination: true,
+                  pagination: false,
                   thumbnails: false,
                   playPause: false,
                   hover: false,
                   loader: 'none',
                   navigation: false,
-                  navigationHover: true,
+                  navigationHover: false,
                   mobileNavHover: false,
                   fx: 'simpleFade'
               })
